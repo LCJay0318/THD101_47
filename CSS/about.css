@@ -1,0 +1,371 @@
+@import url('reset.css');
+
+body{
+
+    font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+    letter-spacing: 0.15em;
+
+}
+
+/* ----------------模組化---------------- */
+
+h1{
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 139px;
+    letter-spacing: 0.15em;
+    color: white;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 70px;
+    letter-spacing: 0.15em;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 0.15em;
+}
+
+p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.15em;
+    color: #000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-block{
+
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+    /* box-sizing: border-box; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* ----------------main---------------- */
+
+/* ----------------hero-banner---------------- */
+
+.hero-banner{
+    background-image: url('../Image/about/hero_background.png');
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner .main-block{
+    width: 100%;
+    border: 2px solid white;
+    flex-flow: column;
+    margin: 60px 30px;
+    padding: 10vh 0;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.hero-banner h1{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    color: white;
+}
+
+.hero-banner h3{
+    color: white;
+}
+
+/* ----------------concept---------------- */
+
+.concept{
+    padding: 60px 0;
+    height: 700px;
+}
+
+.concept .main-block{
+    position: relative;
+
+}
+
+.concept-pic{
+
+    position: absolute;
+    left: 5vw;
+    top: 10vh;
+    display: block;
+    width: 50vw;
+    z-index: 2;
+    box-shadow: -3px 3px 15px #333;
+
+}
+
+.concept-text{
+    position: absolute;
+    left: 50vw;
+    top: 50vh ;
+    z-index: 3;
+    background-color: white;
+
+    padding: 58px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 15px #333;
+}
+
+.concept-text h3{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.concept-text p{
+    width: 350px;
+    line-height: 1.6;
+    font-weight: 100;
+    text-align: left;
+}
+
+.concept .bg{
+
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    background-color: #48678E;
+    width: 50vw;
+    height: 50vh;
+    z-index: 1;
+}
+
+
+/* ----------------core value---------------- */
+
+.core{
+
+    padding: 10vh 0;
+    /* height: 100vh; */
+    background-image: url('../Image/about/about_corevalue_main_bg.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.core .main-block{
+    flex-direction: column;
+
+}
+
+.core-title{
+    margin-bottom: 30px;
+}
+
+.core-list{
+    display: flex;
+    width: 50vw;
+    /* height: 90vh; */
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.core-list .item1, .core-list .item2{
+    position: relative;
+    text-align: center;
+    padding: 25px;
+    margin: 10px;
+
+    flex-grow: 1;
+    flex-basis: 300px;
+    flex-shrink: 0;
+
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.core-list .item1{
+    background-image: url('../Image/about/about_corevalue_white_bg.png');
+}
+
+.core-list .item1:before{
+    content: '';
+    border: 1px solid #7e7e7e;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    position: absolute;
+}
+
+.core-list .item2{
+    background-image: url('../Image/about/about_corevalue_black_bg.png');
+}
+
+.core-list .item2:before{
+    content: '';
+    border: 1px solid white;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    position: absolute;
+}
+
+.core-list li img{
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.core-list li p{
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.core-list .item2 p{
+    color: white;
+}
+
+/* ----------------mile stone---------------- */
+
+
+.milestone{
+    padding: 10vh 0;
+    height: 860px;
+    background-color: #2A2C2E;
+}
+
+.milestone .main-block{
+    flex-direction: column;
+}
+
+.milestone-title{
+    margin-bottom: 30px;
+}
+
+.milestone-title h2{
+    color: white;
+}
+
+.timeline{
+    width: 1000px;
+    /* height: 100vh; */
+    position: relative;
+    background-color: orangered;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+.prev .fa-angle-left, .next .fa-angle-right{
+
+    font-size: 48px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+
+    border: 2px solid transparent;
+}
+
+.prev .fa-angle-left{
+
+    position: absolute;
+    top: 25px;
+    left: 5%;
+    z-index: 20;
+    /* transform: translate(-50%); */
+
+}
+
+.next .fa-angle-right{
+
+    position: absolute;
+    top: 25px;
+    right: 5%;
+    z-index: 20;
+    /* transform: translate(50%); */
+}
+
+.prev .fa-angle-left:hover, .next .fa-angle-right:hover{
+
+    border: 2px solid white;
+}
+
+.timeline .progress{
+    background-color: #666;
+    height: 5px;
+    width: 80%;
+
+    position: absolute;
+    top: 50px;
+
+    display: flex;
+
+    
+}
+
+.timeline .progress li{
+
+    width: 30px;
+    height: 30px;
+    background-color: #666;
+    border: 5px solid white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -15px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline .progress li h3.year{
+    color: white;
+    position: absolute;
+    top: -50px;
+    left: -25px;
+    /* transform: translateX( -25%); */
+    /* padding-bottom: 30px; */
+    /* bottom: -100px; */
+}
+
+.timeline .progress li p.text{
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    transform: translateX( -45%);
+    width:300px;
+    color: white;
+}
+
+.timeline .progress-pic-list{  /* ul */
+    /* clear: both; */
+    /* display: block; */
+    /* background-color: blue; */
+
+    position: absolute;
+    top: 230px;
+    
+}
+
+.progress-pic-list .year1 img{
+    max-width: 1000px;
+    display: block;
+}

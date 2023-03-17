@@ -1,0 +1,321 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+body{
+
+    font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+    letter-spacing: 0.15em;
+
+}
+
+/* ----------------模組化---------------- */
+
+h1{
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 139px;
+    letter-spacing: 0.15em;
+    color: white;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 70px;
+    letter-spacing: 0.15em;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 0.15em;
+}
+
+p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.15em;
+    color: #000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-block{
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* ----------------hero-banner---------------- */
+
+
+.hero-banner{
+    background-image: url('../Image/performence/hero_bg.png');
+    background-size: cover;
+    background-position: top center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-banner .main-block{
+
+    width: 100%;
+    border: 2px solid white;
+    flex-flow: column;
+    margin: 60px 30px;
+    padding: 10vh 0;
+    text-align: center;
+}
+
+.hero-banner h1{
+    margin-bottom: 10vh;
+    color: white;
+}
+
+.hero-banner h3{
+    color: white;
+}
+
+
+/* ----------------selection---------------- */
+
+.main > input{
+    display: none;
+}
+
+.main .selection{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.main .selection ul{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main .selection li{
+    padding: 30px 0;
+    /* width: 100%; */
+}
+
+label span{
+    font-size: 40px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: #999;
+    position: relative;
+}
+
+label span::after{
+    content:"";
+    position: absolute;
+    right:50%;
+    left:50%;
+    bottom:0;
+    border-bottom:1px solid #48678E;
+    transition: .3s;
+}
+
+/* ------------------------------選到bussiness */
+#bussiness:checked ~ .buss{
+    display: block;
+}
+
+#bussiness:checked ~ .house, #bussiness:checked ~ .public{
+    display: none;
+}
+
+#bussiness:checked ~ .selection li:nth-child(1) span{
+    color: #48678E;
+}
+
+#bussiness:checked ~ .selection li:nth-child(1) span::after{
+    right:0%;
+    left:0%;
+}
+
+/* ------------------------------選到house */
+#house:checked ~ .house{
+    display: block;
+}
+
+#house:checked ~ .buss, #house:checked ~ .public{
+    display: none;
+}
+
+#house:checked ~ .selection li:nth-child(3) span{
+    color: #48678E;
+}
+
+#house:checked ~ .selection li:nth-child(3) span::after{
+    right:0%;
+    left:0%;
+}
+/* ------------------------------選到public */
+#public:checked ~ .public{
+    display: block;
+}
+
+#public:checked ~ .house, #public:checked ~ .buss{
+    display: none;
+}
+
+#public:checked ~ .selection li:nth-child(5) span{
+    color: #48678E;
+}
+
+#public:checked ~ .selection li:nth-child(5) span::after{
+    right:0%;
+    left:0%;
+}
+
+/* ----------------bussiness---------------- */
+
+.buss{
+    padding-bottom: 60px;
+    position: relative;
+    height: 550px;
+}
+
+.buss .main-block{
+    flex-direction: column;
+}
+
+
+
+/* ----------------house---------------- */
+
+.house{
+    padding-bottom: 60px;
+    position: relative;
+    height: 550px;
+}
+
+.house .main-block{
+    flex-direction: column;
+}
+
+
+/* ----------------public---------------- */
+
+.public{
+    padding-bottom: 60px;
+    position: relative;
+    height: 550px;
+}
+
+.public .main-block{
+    flex-direction: column;
+}
+
+/* ----------------通用---------------- */
+
+.bg{
+
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: 300px;
+    background-color: #48678E;
+    z-index: -1;
+
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.list{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list li{
+    width: 100%;
+    height: calc( 535px);
+    /* height: 600px; */
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #2A2C2E;
+}
+
+.list li:first-child{
+    margin-left: 0;
+}
+
+.list li:last-child{
+    margin-right: 0;
+}
+
+.list li a img{
+    display: block;
+    width: 100%;
+    filter: brightness(50%);
+    transition: .7s ;
+}
+
+.list li a .text{
+    padding: 30px 0;
+    text-align: center;
+    background-color: white;
+    border-top: 1px solid #2A2C2E;
+    border-left: 1px solid #2A2C2E;
+    border-right: 1px solid #2A2C2E;
+    box-sizing: border-box;
+
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+    transition: .7s ;
+
+}
+
+.list .text h3{
+
+    color: #2A2C2E;
+    margin-bottom: 30px;
+}
+
+.list .text p{
+    font-weight: 100;
+    line-height: 2;
+}
+
+/* ----------------------hover---------------- */
+
+.list li a:hover > .text{
+
+    height: auto;
+    bottom: 0px;
+    transition: .7s ;
+}
+
+.list li a:hover > img{
+    filter: brightness(100%);
+    transition: .7s ;
+}
+
+
+

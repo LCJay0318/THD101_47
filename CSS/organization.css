@@ -1,0 +1,400 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+body{
+
+    font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+    letter-spacing: 0.15em;
+
+}
+
+/* ----------------模組化---------------- */
+
+h1{
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 139px;
+    letter-spacing: 0.15em;
+    color: white;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 70px;
+    letter-spacing: 0.15em;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 0.15em;
+}
+
+p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.15em;
+    color: #000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-block{
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* ----------------hero-banner---------------- */
+
+
+.hero-banner{
+    background-image: url('../Image/organization/hero_banner_bg.png');
+    background-size: cover;
+    background-position: top center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-banner .main-block{
+
+    width: 100%;
+    border: 2px solid white;
+    flex-flow: column;
+    margin: 60px 30px;
+    padding: 10vh 0;
+    text-align: center;
+}
+
+.hero-banner h1{
+    margin-bottom: 10vh;
+    color: white;
+}
+
+.hero-banner h3{
+    color: white;
+}
+
+
+/* ----------------treemap---------------- */
+
+.tree{
+    padding: 60px 0;
+}
+
+.tree .main-block{
+
+    flex-direction: column;
+
+    background-image: url('../Image/organization/treemap_bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.tree .title{
+    margin-bottom: 60px;
+}
+
+.tree .treemap{
+    width: 100%;
+}
+
+.tree .treemap img{
+    width: 100%;
+}
+
+/* ----------------character intro---------------- */
+
+.character{
+    text-align: center;
+    margin: 0 auto;
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.container{
+    position: relative;
+    height: 400px;
+    margin-top: 260px;
+    margin-bottom: 30px;
+
+}
+
+.character::before{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: linear-gradient( to right, rgba(255,255,255, 1), rgba( 255,255,255,0));
+    z-index: 1;
+
+}
+
+.character::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    top: 30px;
+    right: 0 ;
+    background: linear-gradient( to left, rgba(255,255,255, 1), rgba( 255,255,255,0));
+    z-index: 1;
+
+}
+
+.container .intro-list{
+    position: absolute;
+    width: 1890px;
+    left: calc( 50% - 313.5px );
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.intro-list .intro{
+
+    border: 1px solid black;
+    position: relative;
+    width: 567px;
+    border-radius: 30px;
+    margin: 0 30px;
+    flex-shrink: 0;
+    background-color: white;
+    transition: background-color 1s;
+}
+
+.intro .img{
+    top: -50%;
+    left: 50%;
+    width: 290px;
+    height: 290px;
+    display: block;
+    transform:translate(-50%);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.intro .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.intro .text{
+
+    margin-top: 100px;
+
+    padding: 0 50px;
+    padding-bottom: 10px;
+}
+
+.text h3.title{
+    margin-bottom: 20px;
+}
+
+.text .experience{
+    width: 100%;
+    display: flex;
+}
+
+.text .education{
+    width: 100%;
+    display: flex;
+}
+
+.text .left {
+    width: 30%;
+}
+
+.text .right{
+    width: 70%;
+}
+
+.text p{
+    line-height: 2.5;
+    text-align: center;
+}
+
+.text .motto{
+    text-align: center;
+}
+
+input{
+    display: none;
+}
+.container #c1:checked ~ .intro-list{
+    left: calc( 50% - 313.5px );
+    transition: .5s;
+}
+
+.container #c1:checked ~ .intro-list > li:nth-child(1){
+    background-color: #E5DED6;
+    transition: 1s;
+}
+
+.container #c2:checked ~ .intro-list{
+    left: calc( 50% - 940.5px );
+    transition: .5s;
+}
+
+.container #c2:checked ~ .intro-list > li:nth-child(2){
+    background-color: #E5DED6;
+    transition: 1s;
+}
+
+.container #c3:checked ~ .intro-list{
+    left: calc( 50% - 1567.5px );
+    transition: .5s;
+}
+
+.container #c3:checked ~ .intro-list > li:nth-child(3){
+    background-color: #E5DED6;
+    transition: .5s;
+}
+
+.selection{
+
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.selection label{
+    border-radius: 50%;
+    border: 2px solid #48678E;
+}
+
+.selection label span{
+
+    margin: 5px;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+#c1:checked ~ .selection .c1 span{
+    background-color: #48678E;
+    transition: .3s;
+}
+
+#c2:checked ~ .selection .c2 span{
+    background-color: #48678E;
+    transition: .3s;
+}
+
+#c3:checked ~ .selection .c3 span{
+    background-color: #48678E;
+    transition: .3s;
+}
+
+/* ----------------training---------------- */
+
+.training{
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.training .main-block{
+    flex-direction: column;
+}
+
+.training .title{
+    margin-bottom: 60px;
+}
+
+.training .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-areas: 'text1 text1 pic1 pic2'
+                         'pic3  text2 text2 pic4'
+                         'pic5  pic6  text3 text3';
+    grid-gap: 20px;
+}
+
+.grid .pic1{
+    grid-area: pic1;
+}
+
+.grid .pic2{
+    grid-area: pic2;
+}
+
+.grid .pic3{
+    grid-area: pic3;
+}
+
+.grid .pic4{
+    grid-area: pic4;
+}
+
+.grid .pic5{
+    grid-area: pic5;
+}
+
+.grid .pic6{
+    grid-area: pic6;
+}
+
+/*  */
+
+.grid .text1{
+    grid-area: text1;
+}
+
+.grid .text2{
+    grid-area: text2;
+}
+
+.grid .text3{
+    grid-area: text3;
+}
+
+.grid .pic1, .grid .pic2, .grid .pic3, .grid .pic4, .grid .pic5, .grid .pic6{
+    box-shadow: 0px 0px 10px #666;
+}
+
+.grid .pic1 img, .grid .pic2 img, .grid .pic3 img, .grid .pic4 img, .grid .pic5 img, .grid .pic6 img{
+   display: block;
+}
+
+.grid .text1, .grid .text2, .grid .text3{
+    border: 1px solid black;
+    padding: 35px 30px ;
+    text-align: center;
+    box-shadow: 0px 0px 10px #666;
+}
+
+.text1 h3, .text2 h3, .text3 h3{
+    margin-bottom: 20px;
+}
+
+.text1 p, .text2 p, .text3 p{
+    line-height: 2;
+}

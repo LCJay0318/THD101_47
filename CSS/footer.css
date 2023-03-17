@@ -1,0 +1,102 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+.footer p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #F4D481;
+    line-height: 16px;
+}
+
+.footer-header p{
+    line-height: 36px;
+}
+
+.footer-nav p{
+    line-height: 20px;
+}
+
+.footer{
+    background-color: #183D55;
+    height: auto;
+    display: flex;
+    z-index: 5;
+    clear: both;
+
+}
+
+.footer .main-block{
+    margin: 40px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+/* -------------footer-header------------- */
+
+
+.footer-header img{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    margin-bottom: 5px;
+
+}
+
+.footer-header .add{
+    line-height: 36px;
+}
+
+.footer-header .phone{
+    display: flex;
+    justify-content:space-between;
+}
+
+.phone .phone-text{
+    font-weight: 700;
+}
+
+.phone .phone-number{
+    font-weight: normal;
+}
+
+.footer-header .copyright{
+    font-weight: 300;
+    text-align: center;
+}
+
+/* -------------footer-nav------------- */
+
+
+.footer-nav{
+    display: flex;
+}
+
+.footer-nav li{
+    text-align: center;
+    margin-left: 20px;
+}
+
+.footer-nav a .sub{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-nav a .sub-menu{
+    margin-bottom: 20px;
+}
+
+.footer-nav a .sub:hover{
+    color: #bca25e;
+}
+
+.footer-nav a .sub-menu:hover{
+    color: #bca25e; 
+}
+
+/* .footer-nav li:last-child a .sub-menu{
+    margin-bottom: 0;
+} */

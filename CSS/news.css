@@ -1,0 +1,191 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+body{
+
+    font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+    letter-spacing: 0.15em;
+
+}
+
+/* ----------------模組化---------------- */
+
+h1{
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 139px;
+    letter-spacing: 0.15em;
+    color: white;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 70px;
+    letter-spacing: 0.15em;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 0.15em;
+}
+
+p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.15em;
+    color: #000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-block{
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* ----------------hero-banner---------------- */
+
+
+.hero-banner{
+    background-image: url('../Image/news/hero_banner_bg.png');
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-banner .main-block{
+
+    width: 100%;
+    border: 2px solid white;
+    flex-flow: column;
+    margin: 60px 30px;
+    padding: 20vh 0;
+    text-align: center;
+}
+
+.hero-banner h1{
+    margin-bottom: 10vh;
+    color: white;
+}
+
+.hero-banner h3{
+    color: white;
+}
+
+/* ----------------news---------------- */
+
+.company{
+    height: auto;
+    width: 100%;
+    padding: 10vh 0;
+    box-sizing: border-box;
+}
+
+.company .main-block{
+    flex-flow: column;
+}
+
+/* ----------------project---------------- */
+
+.project{
+    height: auto;
+    width: 100%;
+    padding: 10vh 0;
+    box-sizing: border-box;
+    background-color: #48678E;
+}
+
+.project .main-block{
+    flex-flow: column;
+    color: white;
+}
+
+/* ----------------project---------------- */
+
+.honor{
+    height: auto;
+    width: 100%;
+    padding: 10vh 0;
+    box-sizing: border-box;
+}
+
+.honor .main-block{
+    flex-flow: column;
+}
+
+.news-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.news-title h2{
+    margin-bottom: 30px;
+}
+
+.news-list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.news-list li{
+    width: 27%;
+    height: 320px;
+    border: 1px solid #999;
+    background-color: white;
+    padding: 30px;
+    overflow: hidden;
+    transition: .5s;
+    /* border-radius: 10px; */
+}
+
+.news-list li img{
+    width: 100%;
+    display: block;
+    /* border-radius: 10px; */
+}
+
+.text{
+    width: 100%;
+    background-color: white;
+    transition: .7s;
+}
+.text p{
+    text-align: center;
+    line-height: 3;
+}
+
+.news-list li:hover .text{
+    
+    transform: translateY( -50px );
+    transition: .5s;
+}
+
+.news-list li:hover .text p{
+    color:#bca25e ;
+    transition: .5s;
+}
+
+.news-list li:hover{
+    transform: translateY( -5px );
+    box-shadow: 0 0 10px #666;
+    transition: .5s;
+}
