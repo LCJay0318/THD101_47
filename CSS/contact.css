@@ -32,6 +32,13 @@ h3{
     letter-spacing: 0.15em;
 }
 
+h4{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: 0.15em;
+}
+
 p{
     font-size: 20px;
     font-style: normal;
@@ -56,6 +63,10 @@ a{
 
 }
 
+/* .main{
+
+    position: relative;
+} */
 
 /* ----------------hero-banner---------------- */
 
@@ -72,7 +83,6 @@ a{
 }
 
 .hero-banner .main-block{
-
     width: 100%;
     border: 2px solid white;
     flex-flow: column;
@@ -142,8 +152,8 @@ a{
     display: flex;
     flex-direction: column;
     width: 80%;
-
     height: 350px;
+
     flex-wrap: wrap;
     justify-content: space-between;
     counter-increment: center;
@@ -165,7 +175,6 @@ a{
 
     border: 4px solid #48678E;
     border-radius: 50%;
-    /* margin-right: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,7 +190,6 @@ a{
     height: 50px;
     display: block;
     margin: 0 auto;
-
 }
 
 .items p{
@@ -213,22 +221,24 @@ a{
     margin-bottom: 60px;
 }
 
-.text p{
+.text .list p{
     margin-bottom: 30px;
     color: white;
     line-height: 30px;
 }
 
-.text p .fa-solid{
-    /* font-size: 30px; */
+.list p .fa-solid{
     margin-right: 30px;
 }
 
 .insurance .pic{
-    /* margin: 0 60px; */
     width: 50%;
     flex-grow: 1;
-    box-shadow: 0 0 10px #666;
+    box-shadow: 20px 20px 0px rgba(255,255,255,.1);
+}
+
+.insurance .pic img{
+    width: 100%;
 }
 
 /* ----------------FAQ---------------- */
@@ -255,19 +265,18 @@ a{
     width: 60vw;
     margin: 0 auto;
     position: relative;
-    border-bottom: 1px solid black  ;
-
+    border-bottom: 2px solid #48678E  ;
 }
 
 .list .question label{
     cursor: pointer;
 }
 
-.list .question::after{
+.list .question p::after{
     content: '';
     border-style: solid;
     border-width: 10px;
-    border-color: black transparent transparent transparent;
+    border-color: #48678E transparent transparent transparent;
 
     position: absolute;
     right: 10px;
@@ -279,7 +288,7 @@ a{
     width: 60vw;
     margin: 0 auto;
     position: relative;
-    border-bottom: 1px solid black  ;
+    border-bottom: 2px solid #48678E  ;
 }
 
 .list .question p, .list .answer p{
@@ -288,18 +297,18 @@ a{
 }
 
 
-/* arrow */
+/* right-arrow */
 
-#q1:checked ~ .list > .question:nth-child(1)::after{
-    border-color: transparent transparent black transparent;
+#q1:checked ~ .list > .question:nth-child(1) p::after{
+    border-color: transparent transparent #48678E transparent;
 }
 
-#q2:checked ~ .list > .question:nth-child(3)::after{
-    border-color: transparent transparent black transparent;
+#q2:checked ~ .list > .question:nth-child(3) p::after{
+    border-color: transparent transparent #48678E transparent;
 }
 
-#q3:checked ~ .list > .question:nth-child(5)::after{
-    border-color: transparent transparent black transparent;
+#q3:checked ~ .list > .question:nth-child(5) p::after{
+    border-color: transparent transparent #48678E transparent;
 }
 
 /* click */
@@ -326,4 +335,190 @@ a{
 
 #q3:checked ~ .list > .answer:nth-child(6) p{
     color: #666;
+}
+
+/* ----------------information---------------- */
+
+.information{
+    height: auto;
+    width: 100%;
+    padding: 10vh 0;
+}
+
+.information .title{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width: 70%;
+    
+}
+
+.information .title h3{
+    margin-bottom: 60px;
+}
+
+.information .title p{
+    font-weight: 100;
+}
+
+
+/* ----------------information - send---------------- */
+
+article.send{
+    width: 100%;
+    height: 700px;
+
+    background-image: url('../Image/contact/article_bg.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+
+}
+
+.form-box{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, .3);
+}
+
+form{
+    
+    background-color: transparent;
+    width: 25%;
+    margin: 0 auto;
+    padding: 40px 30px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+form h4{
+    text-align: center;
+    color: white;
+}
+.name .sex{
+    position: absolute ;
+    right: 0px;
+    top: 50px ;
+}
+
+.name .sex label{
+    color: white;
+}
+
+.form-box .name, .form-box .phone, .form-box .mail{
+    position: relative;
+    margin: 30px 0 0;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+.name input.text, .phone input.text, .mail input.text{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.text ~ label{
+    position: absolute ;
+    top: 50% ;
+    left: 5px;
+    transform: translateY( -50% );
+    color: white;
+    pointer-events: none;
+    transition: .3s ;
+}
+
+input.text:focus ~ label, input.text:valid ~ label{
+    top: -10px;
+}
+
+.statement p{
+    color: white;
+    margin: 10px 0 5px;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+textarea{
+    width: 96%;
+    color: white;
+    background-color: transparent ;
+    border-radius: 10px;
+    border-color: white;
+    outline: none;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.submit{
+    width: 100%;
+    height: 40px;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    border-color: white;
+    border-width: none;
+    transition: .5s ;
+    cursor: pointer;
+}
+
+.submit:hover{
+
+    color: #333;
+    background-color: white;
+}
+
+/* ----------------information - company-information---------------- */
+
+article.company-information{
+    height: auto;
+    width: 100%;
+    padding-top: 10vh;
+}
+
+.company-information .main-block{
+    flex-direction: row;
+    justify-content: center;
+}
+
+.company-information .left, .company-information .right{
+    width: 40%;
+}
+
+.company-information .left .com-name, .company-information .left .addr, .company-information .left .phone, .company-information .left .fax, .company-information .left .mail{
+    margin-bottom: 30px;
+}
+
+.company-information .left .addr, .company-information .left .phone, .company-information .left .fax, .company-information .left .mail{
+    display: flex;
+    align-items: center;
+}
+
+.company-information .left .com-name{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.company-information .left .fa-solid{
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.company-information .right iframe{
+    width: 100%;
+    display: block;
+    height: 295px;
 }

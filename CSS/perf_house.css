@@ -93,7 +93,7 @@ a{
 /* ----------------contain---------------- */
 
 .contain{
-    padding: 10vh 0;
+    padding: 0 0 10vh;
     height: 860px;
     position: relative;
 }
@@ -106,21 +106,54 @@ a{
     background-color: #48678E;
     position: absolute;
 }
+
 .contain .main-block{
     position: relative;
-    /* flex-direction: column; */
     align-items: start;
     height: calc( 900px - 60px );
+    display: block;
+}
+
+.breadcrumb{
+
+    display: flex;
+    padding: 20px 0;
+}
+
+.breadcrumb li + li{
+    margin-left: 10px;
+}
+
+.breadcrumb li + li::before{
+    content: '>';
+    margin-right: 10px;
+    color: white;
+}
+
+.breadcrumb li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+.breadcrumb li a:hover{
+
+    color: #ccc;
+    left: 50%;
+    right: 50%;
+    transition: .3s;
 }
 
 .title{
     margin-bottom: 30px;
     color: white;
+    text-align: center;
 }
 
 .pic{
     position: absolute;
-    top: 90px;
+    top: 150px;
     right: 0;
 }
 
@@ -131,7 +164,7 @@ article{
     box-sizing: border-box;
     background-color: #fff;
 
-    top: 35%;
+    top: 40%;
     left:0;
     position: absolute;
 }
@@ -165,4 +198,5 @@ article .description{
     font-weight: 100;
     line-height: 2.5;
     width: 255px;
+    margin-right: 20px;
 }

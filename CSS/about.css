@@ -77,13 +77,12 @@ a{
     border: 2px solid white;
     flex-flow: column;
     margin: 60px 30px;
-    padding: 10vh 0;
-    justify-content: space-between;
+    padding: 20vh 0;
+
     text-align: center;
 }
 
 .hero-banner h1{
-    margin-top: 10vh;
     margin-bottom: 10vh;
     color: white;
 }

@@ -55,11 +55,11 @@
     justify-content:space-between;
 }
 
-.phone .phone-text{
+.footer-header .phone .phone-text{
     font-weight: 700;
 }
 
-.phone .phone-number{
+.footer-header .phone .phone-number{
     font-weight: normal;
 }
 
