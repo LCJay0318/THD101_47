@@ -199,6 +199,7 @@ a{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+
 }
 
 .intro .text{
@@ -210,7 +211,7 @@ a{
 }
 
 .text h3.title{
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .text .experience{
@@ -253,6 +254,11 @@ input{
     transition: 1s;
 }
 
+.container #c1:checked ~ .intro-list > li:nth-child(1) .img img{
+    outline: 3px solid #5f4629;
+    transition: .5s;
+}
+
 .container #c2:checked ~ .intro-list{
     left: calc( 50% - 940.5px );
     transition: .5s;
@@ -263,6 +269,11 @@ input{
     transition: 1s;
 }
 
+.container #c2:checked ~ .intro-list > li:nth-child(2) .img img{
+    outline: 3px solid #5f4629;
+    transition: .5s;
+}
+
 .container #c3:checked ~ .intro-list{
     left: calc( 50% - 1567.5px );
     transition: .5s;
@@ -270,8 +281,15 @@ input{
 
 .container #c3:checked ~ .intro-list > li:nth-child(3){
     background-color: #E5DED6;
+    transition: 1s;
+}
+
+.container #c3:checked ~ .intro-list > li:nth-child(3) .img img{
+    outline: 3px solid #5f4629;
     transition: .5s;
 }
+
+/* selection-set */
 
 .selection{
 
@@ -283,33 +301,35 @@ input{
 }
 
 .selection label{
-    border-radius: 50%;
-    border: 2px solid #48678E;
-}
-
-.selection label span{
-
-    margin: 5px;
-    background-color: transparent;
-    width: 10px;
-    height: 10px;
-    display: block;
-    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5f4629;
+    border-radius: 20px;
+    cursor: pointer;
     transition: .3s;
 }
 
-#c1:checked ~ .selection .c1 span{
-    background-color: #48678E;
+#c1:checked ~ .selection label:nth-child(1){
+    width: 40px;
+    left: 50%;
+    right: 50%;
+    background-color: #5f4629;
     transition: .3s;
 }
 
-#c2:checked ~ .selection .c2 span{
-    background-color: #48678E;
+#c2:checked ~ .selection label:nth-child(2){
+    width: 40px;
+    left: 50%;
+    right: 50%;
+    background-color: #5f4629;
     transition: .3s;
 }
 
-#c3:checked ~ .selection .c3 span{
-    background-color: #48678E;
+#c3:checked ~ .selection label:nth-child(3){
+    width: 40px;
+    left: 50%;
+    right: 50%;
+    background-color: #5f4629;
     transition: .3s;
 }
 
