@@ -49,6 +49,7 @@
 
 .header p{
     color: white;
+    /* transition: .5s; */
 }
 
 /* -----------------sub-menu------------------- */
@@ -96,8 +97,8 @@
 }
 
 .nav p:hover {
-
     color: #F4D481;
+    /* transition: .7s; */
 }
 
 .sub-menu:hover > .sub-menu{
