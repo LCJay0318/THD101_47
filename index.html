@@ -8,31 +8,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href='CSS/header.css'>
+    <link rel="stylesheet" href='CSS/header-footer.css'>
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="CSS/index.css">
-
-    <title>首頁</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Dreamer</title>
 </head>
 <body>
 
 
-
+    <div id="loading">
+        <div id="loading_el"></div>
+    </div>
     <!-- main -->
     <div class="main">
 
         <!-- hero-banner -->
         <section class="hero-banner">
             <div class="main-block">
-                <h1>Home<br>Dreams Begin</h1>
-                <h3>讓我們與您攜手 共同實現夢想家</h3>
+                <h1 data-aos="zoom-in-up"
+                 data-aos-duration="1000">Home<br>Dreams Begin</h1>
+                <h3 data-aos="zoom-in-up"
+                data-aos-duration="1000" data-aos-delay="300">讓我們與您攜手 共同實現夢想家</h3>
             </div>
         </section>
 
         <!-- header -->
-        <header class="header">
+        <header class="header" data-aos="fade-down"
+        data-aos-anchor=".about"
+        data-aos-duration="600" data-aos-once="true">
             <div class="main-block">
                 <a href="index.html" class="logo"></a>
+                <ul class="nav">
+                    <li  data-aos="fade-right" data-aos-anchor=".about" data-aos-duration="600" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="about.html"><p>公司簡介</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".about" data-aos-duration="600" 
+                    data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="management.html"><p>工程管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".about" data-aos-duration="600" 
+                    data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="performence.html"><p>工程實績</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".about" data-aos-duration="600" 
+                    data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="organization.html"><p>組織管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".about" data-aos-duration="600" 
+                    data-aos-delay="400" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="news.html"><p>活動及消息</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".about" data-aos-duration="600" 
+                    data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="contact.html"><p>聯絡我們</p></a>
+                    </li>
+                </ul>
+                <div class="hamburger"></div>
+            </div>
+            <div class="hidden_nav">
                 <ul class="nav">
                     <li>
                         <a href="about.html"><p>公司簡介</p></a>
@@ -54,25 +89,21 @@
                     </li>
                 </ul>
             </div>
+
         </header>
 
         <!-- about us -->
         <section class="about">
             <div class="main-block">
-                <div class="about-title">
+                <div class="about-title" data-aos="fade-up" data-aos-duration="1000"  data-aos-once="true">
                     <h2>ABOUT DREAMER</h2>
                     <h3>關於我們</h3>
                 </div>
-                <div class="contain">
-                    <div class="left"></div>
-                    <div class="right">
-                        <p>DREAMER積極擴張經營領域<br>
-                            將觸角伸向公共及民間的各項土木工程<br>
-                            先後承攬橋梁工程、道路工程、水利工程、<br>
-                            汙水下水道系統工程等不同性質的工程專案<br>
-                            朝著永續經營的目標邁進
-                        </p>
-                        <a href="about.html">- READ MORE -</a>
+                <div class="contain" >
+                    <div class="left" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"></div>
+                    <div class="right" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800" data-aos-once="true">
+                        <p>DREAMER積極擴張經營領域，將觸角伸向公共及民間的各項土木工程，先後承攬橋梁工程、道路工程、水利工程、汙水下水道系統工程等不同性質的工程專案，朝著永續經營的目標邁進。</p>
+                        <a href="about.html" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500" data-aos-once="true">- READ MORE -</a>
                     </div>
                 </div>
             </div>
@@ -81,13 +112,14 @@
         <!-- news -->
         <section class="news">
             <div class="main-block">
-                <div class="news-title">
+                <div class="news-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-once="true">
                     <h2>WHAT NEWS</h2>
                     <h3>最新消息</h3>
                 </div>
                 <ul class="news-list">
-                    <li>
+                    <li data-aos="fade-up" data-aos-offset="150" data-aos-duration="500" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="#">
+                            <span>公司活動</span>
                             <img src="Image/news/comp_pic1.png" alt="">
                             <div class="text">
                                 <p>2022/12/25</p>
@@ -96,8 +128,10 @@
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-offset="150" data-aos-duration="500"
+                    data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="#">
+                            <span>工程消息</span>
                             <img src="Image/index/news_pic2.png" alt="">
                             <div class="text">
                                 <p>2022/5/13</p>
@@ -106,8 +140,10 @@
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-offset="150" data-aos-duration="500"
+                    data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="#">
+                            <span>榮耀時刻</span>
                             <img src="Image/index/news_pic3.png" alt="">
                             <div class="text">
                                 <p>2022/11/7</p>
@@ -121,68 +157,99 @@
         </section>
 
         <!-- project -->
-
         <section class="project">
-            <div class="project-title">
-                <h2>PROJECT<br>
-                    PERFORMANCE</h2>
-                <h3>工程實績</h3>
-            </div>
+            <div class="main-block">
+                <div class="project-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                    <h2>PROJECT<br>
+                        PERFORMANCE</h2>
+                    <h3>工程實績</h3>
+                </div>
 
-            <input type="radio" id="prev" name="moving">
-            <input type="radio" id="next" name="moving">
-            <label for="prev" class="prev"><i class="fa-solid fa-angle-left"></i></label>
-            <label for="next" class="next"><i class="fa-solid fa-angle-right"></i></label>
-            <ul class="project-list">
-                <li class="proj">
-                    <a href="performence.html">
-                        <h3>商辦建築</h3>
-                        <p>了解更多</p>
-                        <img src='Image/index/project_pic1.png' alt="">
-                    </a>
-                </li>
-                <li class="proj">
-                    <a href="performence.html">
-                        <h3>公共設施</h3>
-                        <p>了解更多</p>
-                        <img src='Image/index/project_pic2.png' alt="">
-                    </a>
-                </li>
-                <li class="proj">
-                    <a href="performence.html">
-                        <h3>集合住宅</h3>
-                        <p>了解更多</p>
-                        <img src='Image/index/project_pic3.png' alt="">
-                    </a>
-                </li>
-            </ul>
+                <div class="project_slider" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                    <div class="wrapper">
+                        <div class="slide_list">
+                            <div class="slide">
+                                <a href="performence.html">
+                                    <h3>集合住宅</h3>
+                                    <p>了解更多</p>
+                                    <img src='Image/index/project_pic3.png' alt="">
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="performence.html">
+                                    <h3>商辦建築</h3>
+                                    <p>了解更多</p>
+                                    <img src='Image/index/project_pic1.png' alt="">
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="performence.html">
+                                    <h3>公共設施</h3>
+                                    <p>了解更多</p>
+                                    <img src='Image/index/project_pic2.png' alt="">
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="performence.html">
+                                    <h3>集合住宅</h3>
+                                    <p>了解更多</p>
+                                    <img src='Image/index/project_pic3.png' alt="">
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="performence.html">
+                                    <h3>商辦建築</h3>
+                                    <p>了解更多</p>
+                                    <img src='Image/index/project_pic1.png' alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project_slider_prev">&#9001</div>
+                    <div class="project_slider_next">&#9002</div>
+                    <div class="project_slider_dot">
+                        <span class="dot on" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                    </div>
+                </div>
+    
+            </div>
         </section>
+
 
         <!-- warranty -->
         <section class="warranty">
             <div class="main-block">
-                <div class="warr-title">
+                <div class="warr-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                     <h2>FOUR<br>
                         WARRANTY</h2>
                     <h3>四大保證</h3>
-                    <p>秉持著這信念蓋著房，堆砌自己要住的房<br>
-                        「品質是標配 價格是選配」 是對建築的落實<br>
-                        永遠把客戶的需求放在第一位，永遠比客戶想得更多、更周全、更挑剔</p>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">秉持著這信念蓋著房，堆砌自己要住的房，「品質是標配 價格是選配」是對建築的落實，永遠把客戶的需求放在第一位，永遠比客戶想得更多、更周全、更挑剔</p>
                 </div>
                 <div class="warr-list">
-                    <li>
+                    <li data-aos="flip-left" data-aos-easing="ease-in-sine"
+                    data-aos-duration="500" data-aos-delay="100"
+                    data-aos-anchor=".warr-list" data-aos-once="true">
                         <img src='Image/index/warranty_pic1.svg' alt="">
                         <p>環保建材</p>
                     </li>
-                    <li>
+                    <li data-aos="flip-left" data-aos-easing="ease-in-sine"
+                    data-aos-duration="500" data-aos-delay="300"
+                    data-aos-anchor=".warr-list" data-aos-once="true">
                         <img src="Image/index/warranty_pic2.svg" alt="">
                         <p>按圖施工</p>
                     </li>
-                    <li>
+                    <li data-aos="flip-left" data-aos-easing="ease-in-sine"
+                    data-aos-duration="500" data-aos-delay="500"
+                    data-aos-anchor=".warr-list" data-aos-once="true">
                         <img src="Image/index/warranty_pic3.svg" alt="">
                         <p>如期交屋</p>
                     </li>
-                    <li>
+                    <li data-aos="flip-left" data-aos-easing="ease-in-sine"
+                    data-aos-duration="500" data-aos-delay="700"
+                    data-aos-anchor=".warr-list" data-aos-once="true">
                         <img src="Image/index/warranty_pic4.svg" alt="">
                         <p>永續服務</p>
                     </li>
@@ -256,5 +323,14 @@
         </div>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/header-footer.js"></script>
+    <script src="JS/index.js"></script>
+    <script src="js/loading.js"></script>
+    <script>
+
+        AOS.init();
+    </script>
 </body>
 </html>

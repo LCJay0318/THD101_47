@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href='CSS/header.css'>
+    <link rel="stylesheet" href='CSS/header-footer.css'>
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="CSS/performence.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>performence</title>
 </head>
 <body>
     
-
+    <div id="loading">
+        <div id="loading_el"></div>
+    </div>
 
     <!-- main -->
     <div class="main">
@@ -24,217 +27,199 @@
         <!-- hero-banner -->
         <section class="hero-banner">
             <div class="main-block">
-                <h1>PROJECT<br>
+                <h1 data-aos="zoom-in-up"
+                data-aos-duration="1000">PROJECT<br>
                     PERFORMENCE</h1>
-                <h3>工程實績</h3>
+                <h3 data-aos="zoom-in-up"
+                data-aos-duration="1000" data-aos-delay="300">工程實績</h3>
             </div>
         </section>
         
-        <!-- header -->
-        <header class="header">
+       <!-- header -->
+       <header class="header" data-aos="fade-down"
+       data-aos-anchor=".selector_block"
+       data-aos-duration="600" data-aos-once="true">
+           <div class="main-block">
+               <a href="index.html" class="logo"></a>
+               <ul class="nav">
+                   <li  data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" data-aos-easing="ease-in-sine" data-aos-once="true">
+                       <a href="about.html"><p>公司簡介</p></a>
+                   </li>
+                   <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                   data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
+                       <a href="management.html"><p>工程管理</p></a>
+                   </li>
+                   <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                   data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
+                       <a href="performence.html"><p>工程實績</p></a>
+                   </li>
+                   <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                   data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                       <a href="organization.html"><p>組織管理</p></a>
+                   </li>
+                   <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                   data-aos-delay="400" data-aos-easing="ease-in-sine" data-aos-once="true">
+                       <a href="news.html"><p>活動及消息</p></a>
+                   </li>
+                   <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                   data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                       <a href="contact.html"><p>聯絡我們</p></a>
+                   </li>
+               </ul>
+               <div class="hamburger"></div>
+           </div>
+           <div class="hidden_nav">
+               <ul class="nav">
+                   <li>
+                       <a href="about.html"><p>公司簡介</p></a>
+                   </li>
+                   <li>
+                       <a href="management.html"><p>工程管理</p></a>
+                   </li>
+                   <li>
+                       <a href="performence.html"><p>工程實績</p></a>
+                   </li>
+                   <li>
+                       <a href="organization.html"><p>組織管理</p></a>
+                   </li>
+                   <li>
+                       <a href="news.html"><p>活動及消息</p></a>
+                   </li>
+                   <li>
+                       <a href="contact.html"><p>聯絡我們</p></a>
+                   </li>
+               </ul>
+           </div>
+
+       </header>
+
+       <section class="selector_block">
             <div class="main-block">
-                <a href="index.html" class="logo"></a>
-                <ul class="nav">
-                    <li>
-                        <a href="about.html"><p>公司簡介</p></a>
-                    </li>
-                    <li>
-                        <a href="management.html"><p>工程管理</p></a>
-                    </li>
-                    <li>
-                        <a href="performence.html"><p>工程實績</p></a>
-                    </li>
-                    <li>
-                        <a href="organization.html"><p>組織管理</p></a>
-                    </li>
-                    <li>
-                        <a href="news.html"><p>活動及消息</p></a>
-                    </li>
-                    <li>
-                        <a href="contact.html"><p>聯絡我們</p></a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+                <form action="" class="select_form">
+                    <!-- <label for="type">建築型式:</label> -->
+                    <select name="" class="select_list" id="type">
+                        <option value="allType" selected>全部建案</option>
+                        <option value="bussiness">商辦建築</option>
+                        <option value="house">集合住宅</option>
+                        <option value="public">公共設施</option>
+                    </select>
+                </form>
 
-        
-        <input type="radio" id="bussiness" name="controll">
-        <input type="radio" id="house" name="controll" >
-        <input type="radio" id="public" name="controll" >
+                <form action="" class="select_form">
+                    <!-- <label for="time">完工時間:</label> -->
+                    <select name="" class="select_list" id="time">
+                        <option value="allTime" selected>全部時間</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </form>
 
-        <div class="selection">
-            <div class="main-block">
-                <ul>
-                    <li>            
-                        <label for="bussiness">
-                            <span>商辦建築</span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label for="house">
-                            <span>集合住宅</span>
-                        </label>
-                    </li>
-                    <li>           
-                        <label for="public">
-                        <span>公共設施</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        
-
-        <!-- bussiness -->
-        <section class="buss">
-            <div class="main-block">
-                <div class="bg"></div>
-                <!-- <div class="title">
-                    <h2>商辦建築</h2>
-                </div> -->
-
-                <ul class="list">
-                    <li>
-                        <a href="perf_buss1.html">
-                            <img src="Image/performence/bus_pic1.png" alt="">
-                            <div class="text">
-                                <h3>優府大廈</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_buss2.html">
-                            <img src="Image/performence/bus_pic2.png" alt="">
-                            <div class="text">
-                                <h3>瑞景中心</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_buss3.html">
-                            <img src="Image/performence/bus_pic3.png" alt="">
-                            <div class="text">
-                                <h3>綠洲商務中心</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_buss4.html">
-                            <img src="Image/performence/bus_pic4.png" alt="">
-                            <div class="text">
-                                <h3>珍珠塔</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- house -->
-
-        <section class="house">
-
-            <div class="main-block">
-                <div class="bg"></div>
-                <!-- <div class="title">
-                    <h2>集合住宅</h2>
-                </div> -->
-
-                <ul class="list">
-                    <li>
-                        <a href="perf_house1.html">
-                            <img src="Image/performence/house_pic1.png" alt="">
-                            <div class="text">
-                                <h3>星空雅居</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_house2.html">
-                            <img src="Image/performence/house_pic2.png" alt="">
-                            <div class="text">
-                                <h3>湖畔別墅</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_house3.html">
-                            <img src="Image/performence/house_pic3.png" alt="">
-                            <div class="text">
-                                <h3>紫金花園</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_house4.html">
-                            <img src="Image/performence/house_pic4.png" alt="">
-                            <div class="text">
-                                <h3>花園別墅</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
- 
-        <!-- public -->
-        <section class="public">
-
-            <div class="main-block">
-                <div class="bg"></div>
-
-                <ul class="list">
-                    <li>
-                        <a href="perf_public1.html">
-                            <img src="Image/performence/pub_pic1.png" alt="">
-                            <div class="text">
-                                <h3>知識圖書館</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_public2.html">
-                            <img src="Image/performence/pub_pic2.png" alt="">
-                            <div class="text">
-                                <h3>星空博物館</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_public3.html">
-                            <img src="Image/performence/pub_pic3.png" alt="">
-                            <div class="text">
-                                <h3>綠野圖書館</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="perf_public4.html">
-                            <img src="Image/performence/pub_pic4.png" alt="">
-                            <div class="text">
-                                <h3>影視視聽教室</h3>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <form action="" class="select_form">
+                    <!-- <label for="price">造價(億):</label> -->
+                    <select name="" class="select_list" id="price">
+                        <option value="allPrice" selected>全部造價(億)</option>
+                        <option value="21-30">21-30</option>
+                        <option value="11-20">11-20</option>
+                        <option value="6-10">6-10</option>
+                        <option value="1-5">1-5</option>
+                    </select>
+                </form>
             </div>
         </section>
        
-    </div>
+   
+        <div class="project">
+            <div class="main-block">
+                <a href="perf_buss1.html" class="buss 2020 21-30 open" >
+                    <img src="Image/performence/bus_pic1.png" alt="">
+                    <div class="text">
+                        <h3>優府大廈</h3>
+                        <p>完工時間:2020<br>造價:21億</p>
+                    </div>
+                </a>
+                <a href="perf_buss2.html" class="buss 2021 11-20 open">
+                    <img src="Image/performence/bus_pic2.png" alt="">
+                    <div class="text">
+                        <h3>瑞景中心</h3>
+                        <p>完工時間:2021<br>造價:15億</p>
+                    </div>
+                </a>
+                <a href="perf_buss3.html" class="buss 2021 21-30 open">
+                    <img src="Image/performence/bus_pic3.png" alt="">
+                    <div class="text">
+                        <h3>綠洲商務中心</h3>
+                        <p>完工時間:2021<br>造價:22億</p>
+                    </div>
+                </a>
+                <a href="perf_buss4.html" class="buss 2022 11-20 open">
+                    <img src="Image/performence/bus_pic4.png" alt="">
+                    <div class="text">
+                        <h3>珍珠塔</h3>
+                        <p>完工時間:2022<br>造價:12億</p>
+                    </div>
+                </a>
+                <a href="perf_house1.html" class="house 2019 1-5 open">
+                    <img src="Image/performence/house_pic1.png" alt="">
+                    <div class="text">
+                        <h3>星空雅居</h3>
+                        <p>完工時間:2019<br>造價:3億</p>
+                    </div>
+                </a>
+                <a href="perf_house2.html" class="house 2020 1-5 open">
+                    <img src="Image/performence/house_pic2.png" alt="">
+                    <div class="text">
+                        <h3>湖畔別墅</h3>
+                        <p>完工時間:2020<br>造價:4億</p>
+                    </div>
+                </a>
+                <a href="perf_house3.html" class="house 2021 6-10 open">
+                    <img src="Image/performence/house_pic3.png" alt="">
+                    <div class="text">
+                        <h3>紫金花園</h3>
+                        <p>完工時間:2021<br>造價:8億</p>
+                    </div>
+                </a>
+                <a href="perf_house4.html" class="house 2022 1-5 open">
+                    <img src="Image/performence/house_pic4.png" alt="">
+                    <div class="text">
+                        <h3>花園別墅</h3>
+                        <p>完工時間:2022<br>造價:3億</p>
+                    </div>
+                </a>
+                <a href="perf_public1.html" class="public 2020 1-5 open">
+                    <img src="Image/performence/pub_pic1.png" alt="">
+                    <div class="text">
+                        <h3>知識圖書館</h3>
+                        <p>完工時間:2020<br>造價:2億</p>
+                    </div>
+                </a>
+                <a href="perf_public2.html" class="public 2021 11-20 open">
+                    <img src="Image/performence/pub_pic2.png" alt="">
+                    <div class="text">
+                        <h3>星空博物館</h3>
+                        <p>完工時間:2021<br>造價:11億</p>
+                    </div>
+                </a>
+                <a href="perf_public3.html" class="public 2022 1-5 open">
+                    <img src="Image/performence/pub_pic3.png" alt="">
+                    <div class="text">
+                        <h3>綠野圖書館</h3>
+                        <p>完工時間:2022<br>造價:3億</p>
+                    </div>
+                </a>
+                <a href="perf_public4.html" class="public 2022 1-5 open">
+                    <img src="Image/performence/pub_pic4.png" alt="">
+                    <div class="text">
+                        <h3>影視視聽教室</h3>
+                        <p>完工時間:2022<br>造價:1億</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+     </div>
 
     <!-- footer -->
     <footer class="footer">
@@ -301,5 +286,16 @@
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/header-footer.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/performence.js"></script>
+    
+    <script>
+        AOS.init();
+
+    </script>
 </body>
 </html>

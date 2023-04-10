@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href='CSS/header.css'>
+    <link rel="stylesheet" href='CSS/header-footer.css'>
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="CSS/management.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>management</title>
 </head>
 <body>
     
-
+    <div id="loading">
+        <div id="loading_el"></div>
+    </div>
 
     <!-- main -->
     <div class="main">
@@ -24,16 +27,48 @@
         <!-- hero-banner -->
         <section class="hero-banner">
             <div class="main-block">
-                <h1>PROJECT<br>
+                <h1 data-aos="zoom-in-up"
+                data-aos-duration="1000">PROJECT<br>
                     MANAGEMENT</h1>
-                <h3>工程管理</h3>
+                <h3 data-aos="zoom-in-up"
+                data-aos-duration="1000" data-aos-delay="300">工程管理</h3>
             </div>
         </section>
 
         <!-- header -->
-        <header class="header">
+        <header class="header" data-aos="fade-down"
+        data-aos-anchor=".contain"
+        data-aos-duration="600" data-aos-once="true">
             <div class="main-block">
                 <a href="index.html" class="logo"></a>
+                <ul class="nav">
+                    <li  data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="about.html"><p>公司簡介</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="management.html"><p>工程管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="performence.html"><p>工程實績</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="organization.html"><p>組織管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="400" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="news.html"><p>活動及消息</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="contact.html"><p>聯絡我們</p></a>
+                    </li>
+                </ul>
+                <div class="hamburger"></div>
+            </div>
+            <div class="hidden_nav">
                 <ul class="nav">
                     <li>
                         <a href="about.html"><p>公司簡介</p></a>
@@ -55,6 +90,7 @@
                     </li>
                 </ul>
             </div>
+
         </header>
 
         <!-- conatain -->
@@ -62,46 +98,46 @@
             <div class="main-block">
                 <ul class="list">
                     <li>
-                        <div class="pic-left">
+                        <div class="pic-left" id="order2" data-aos="fade-right" data-aos-duration="1000">
                             <img src="Image/management/contain_pic1.png" alt="">
                         </div>
-                        <div class="text">
+                        <div class="text" id="order2" data-aos="fade-left" data-aos-duration="1000">
                             <h3>BIM應用</h3>
                             <p>作為BIM的先驅者藉由BIM有效降低成本、減少介面衝突、找尋最佳化施工管理</p>
                         </div>
                     </li>
                     <li>
-                        <div class="text">
+                        <div class="text" id="order4" data-aos="fade-right" data-aos-duration="1000">
                             <h3>品質管理</h3>
                             <p>設定嚴謹的查核機制，以負責到底的心意看待每一次承攬工程，是理想更是不變的企業使命</p>
                         </div>
-                        <div class="pic-right">
+                        <div class="pic-right" id="order3" data-aos="fade-left" data-aos-duration="1000">
                             <img src="Image/management/contain_pic2.png" alt="">
                         </div>
                     </li>
                     <li>
-                        <div class="pic-left">
+                        <div class="pic-left" id="order5" data-aos="fade-right" data-aos-duration="1000">
                             <img src="Image/management/contain_pic3.png" alt="">
                         </div>
-                        <div class="text">
+                        <div class="text" id="order6" data-aos="fade-left" data-aos-duration="1000">
                             <h3>成本管控</h3>
                             <p>秉持服務為先，合理預算發包，採採階段性地控制設計案之成本，使其不超過預算</p>
                         </div>
                     </li>
                     <li>
-                        <div class="text">
+                        <div class="text" id="order8" data-aos="fade-right" data-aos-duration="1000">
                             <h3>環境保護</h3>
                             <p>藉由”6S”整理、整頓、清潔、清掃、紀律、安全之推行，創造一個良好舒適的優質施工環境</p>
                         </div>
-                        <div class="pic-right">
+                        <div class="pic-right" id="order7" data-aos="fade-left" data-aos-duration="1000">
                             <img src="Image/management/contain_pic4.png" alt="">
                         </div>
                     </li>
                     <li>
-                        <div class="pic-left">
+                        <div class="pic-left" id="order9" data-aos="fade-right" data-aos-duration="1000">
                             <img src="Image/management/contain_pic5.png" alt="">
                         </div>
-                        <div class="text">
+                        <div class="text" id="order10" data-aos="fade-left" data-aos-duration="1000">
                             <h3>安全維護</h3>
                             <p>透過危害鑑別、風險評估及相關計畫決定控制方法，以預防大於改善為基石，有效降低職災發生</p>
                         </div>
@@ -177,5 +213,12 @@
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/header-footer.js"></script>
+    <script src="js/loading.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

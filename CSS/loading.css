@@ -1,0 +1,41 @@
+
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #48678E;
+    z-index: 101;
+}
+
+#loading_el{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 10px solid #333;
+    border-top-color: #F4D481 ;
+    border-bottom-color: #F4D481 ;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    animation: rotate 1s linear infinite;
+    z-index: 2;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg) scale(1);
+        border-radius: 50%;
+    }
+    50%{
+        transform: rotate(180deg) scale(1);
+        border-radius: 50%;
+    }
+    100%{
+        transform: rotate(360deg)  scale(1);
+        border-radius: 50%;
+    }
+}

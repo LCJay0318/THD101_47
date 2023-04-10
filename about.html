@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href='CSS/header.css'>
+    <link rel="stylesheet" href='CSS/header-footer.css'>
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="CSS/about.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>About</title>
 </head>
 <body>
     
-
+    <div id="loading">
+        <div id="loading_el"></div>
+    </div>
 
     <!-- main -->
     <div class="main">
@@ -30,9 +33,39 @@
         </section>
 
         <!-- header -->
-        <header class="header">
+        <header class="header" data-aos="fade-down"
+        data-aos-anchor=".selector_block"
+        data-aos-duration="600" data-aos-once="true">
             <div class="main-block">
                 <a href="index.html" class="logo"></a>
+                <ul class="nav">
+                    <li  data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="about.html"><p>公司簡介</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                    data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="management.html"><p>工程管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                    data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="performence.html"><p>工程實績</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                    data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="organization.html"><p>組織管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                    data-aos-delay="400" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="news.html"><p>活動及消息</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".selector_block" data-aos-duration="600" 
+                    data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="contact.html"><p>聯絡我們</p></a>
+                    </li>
+                </ul>
+                <div class="hamburger"></div>
+            </div>
+            <div class="hidden_nav">
                 <ul class="nav">
                     <li>
                         <a href="about.html"><p>公司簡介</p></a>
@@ -54,43 +87,47 @@
                     </li>
                 </ul>
             </div>
+
         </header>
         
         <!-- concept -->
-        <section class="concept">
+        <section class="concept" >
             <div class="main-block">
-                <img src='Image/about/about_pic1.png' alt="" class="concept-pic">
-                <div class="concept-text">
+                <div class="concept-text" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor=".bg" data-aos-once="true">
                     <h3>經營理念</h3>
                     <p>秉持「誠信、品質、服務、創新、永續」的經營理念，建立「業主放心」、「客戶滿意」的營建使命，做好高品質的工程也是回饋社會的方式。</p>
                 </div>
-                <div class="bg"></div>
+                <img src='Image/about/about_pic1.png' alt="" class="concept-pic" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="300" data-aos-anchor=".bg" data-aos-once="true">
+                <div class="bg" data-aos="zoom-out-up" data-aos-once="true"></div>
             </div>
         </section>
 
         <!-- core value -->
         <section class="core">
             <div class="main-block">
-                <div class="core-title">
+                <div class="core-title" data-aos="zoom-out-up" data-aos-duration="600" data-aos-once="true" data-aos-once="true">
                     <h2>核心價值</h2>
                 </div>
                 <ul class="core-list">
-                    <li class="item1">
+                    <li class="item1" data-aos="flip-up" data-aos-anchor=".core-title" data-aos-duration="600" data-aos-delay="400" data-aos-once="true">
                         <img src='Image/about/about_corevalue_pic1.png' alt="">
                         <p>誠心服務</p>
                         <p>客戶滿意將是企業經營的重要指標</p>
                     </li>
-                    <li class="item2">
+                    <li class="item2" data-aos="flip-up" data-aos-anchor=".item1" data-aos-duration="600"
+                    data-aos-delay="800" data-aos-once="true">
                         <img src='Image/about/about_corevalue_pic2.png' alt="">
                         <p>創新進步</p>
                         <p>創新精神為企業生存重要的條件</p>
                     </li>
-                    <li class="item2">
+                    <li class="item3" data-aos="flip-up" data-aos-anchor=".item1" data-aos-duration="600"
+                    data-aos-delay="1200" data-aos-once="true">
                         <img src='Image/about/about_corevalue_pic3.png' alt="">
                         <p>永續經營</p>
                         <p>秉持經營理念以達生生不息的企業永續</p>
                     </li>
-                    <li class="item1">
+                    <li class="item4" data-aos="flip-up" data-aos-anchor=".item1" data-aos-duration="600"
+                    data-aos-delay="1600" data-aos-once="true">
                         <img src='Image/about/about_corevalue_pic4.png' alt="">
                         <p>品質保證</p>
                         <p>落實教育訓練<br>
@@ -104,60 +141,59 @@
 
         <section class="milestone">
             <div class="main-block">
-                <div class="milestone-title">
+                <div class="milestone-title" data-aos="fade-left" data-aos-duration="600"  data-aos-once="true">
                     <h2>里程碑</h2>
                 </div>
 
-                <div class="timeline">  <!-- relative -->
+                <div class="timeline" data-aos="fade-right" data-aos-duration="600" data-aos-once="true">
 
-                    <input type="radio" name="direction" id="prev">
-                    <input type="radio" name="direction" id="next">
-                    <label for="prev"><i class="fa-solid fa-angle-left"></i></label>
-                    <label  for="next"><i class="fa-solid fa-angle-right"></i></label>
+                    <a href="#" class="prev"><i class="fa-solid fa-angle-left"></i></a>
+                    <a href="#" class="next"><i class="fa-solid fa-angle-right"></i></a>
 
-                    <input type="radio" id="year2012" name="timeline">
-                    <input type="radio" id="year2016" name="timeline">
-                    <input type="radio" id="year2018" name="timeline">
-                    <input type="radio" id="year2020" name="timeline">
-                    <input type="radio" id="year2022" name="timeline">
-
-                    <div class="wrapper">  <!-- relative -->
+                    <div class="wrapper">
                         <ul class="progress"> 
+                            <span id="progress_for_click"></span>
                             <li class="year1" >
                                 <label for="year2012"></label>
+                                <span id="year2012"></span>
                                 <div class="text">
                                     <h3 class="year">2012</h3>
                                 </div>
                             </li>
                             <li class="year2" >
                                 <label for="year2016"></label>
+                                <span id="year2016"></span>
                                 <div class="text">
                                     <h3 class="year">2016</h3>
                                 </div>
                             </li>
                             <li class="year3" >
                                 <label for="year2018"></label>
+                                <span id="year2018"></span>
                                 <div class="text">
                                     <h3 class="year">2018</h3>
                                 </div>
                             </li>
                             <li class="year4" >
                                 <label for="year2020"></label>
+                                <span id="year2020"></span>
                                 <div class="text">
                                     <h3 class="year">2020</h3>
                                 </div>
                             </li>
                             <li class="year5" >
                                 <label for="year2022"></label>
+                                <span id="year2022"></span>
                                 <div class="text">
                                     <h3 class="year">2022</h3>
                                 </div>
                             </li>
                         </ul>
+
                     </div>
                     
                     <!-- timeline-picture -->
-                    <ul class="progress-pic-list">
+                    <ul class="progress-pic-list" >
                         <li class="year1">
                             <div class="text">
                                 <h3 class="year">-天山大壩-</h3>
@@ -199,6 +235,74 @@
                             <img src="Image/about/about_timeline_pic5.png" alt="">
                         </li>
                     </ul>
+                </div>
+
+                <!-- rwd -->
+                <div class="timeline_RWD">
+                    <div class="left">
+                        <ul class="time_list">
+                            <li class="time1 active">
+                                <span>2012</span>
+                            </li>
+                            <li class="time2">
+                                <span>2016</span>
+                            </li>
+                            <li class="time3">
+                                <span>2018</span>
+                            </li>
+                            <li class="time4">
+                                <span>2020</span>
+                            </li>
+                            <li class="time5">
+                                <span>2022</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="right">
+                        <ul class="pic_list">
+                            <li class="year1 active">
+                                <div class="text">
+                                    <h3 class="year">天山大壩</h3>
+                                    <p class="content">榮獲經濟部公共工程優質獎<br>
+                                        「公共工程品質優良獎」</p>
+                                </div>
+                                <img src="Image/about/about_timeline_pic1_RWD.png" alt="">
+                            </li>
+                            <li class="year2">
+                                <div class="text">
+                                    <h3 class="year">上市上櫃</h3>
+                                    <p class="content">4月增資為87,777.7萬元<br>
+                                        9月掛牌上市。</p>
+                                </div>
+                                <img src="Image/about/about_timeline_pic2_RWD.png" alt="">
+                            </li>
+                            <li class="year3">
+                                <div class="text">
+                                    <h3 class="year">陽明山大學新建校舍</h3>
+                                    <p class="content">榮獲台北市政府評鑑優等工程<br>
+                                        獲得中華民國建築金石獎</p>
+                                </div>
+                                <img src="Image/about/about_timeline_pic3_RWD.png" alt="">
+                            </li>
+                            <li class="year4">
+                                <div class="text">
+                                    <h3 class="year">海底隧道</h3>
+                                    <p class="content">獲選承包CAI海底隧道工程<br>
+                                        全台唯一擁有海底天井工程</p>
+                                </div>
+                                <img src="Image/about/about_timeline_pic4_RWD.png" alt="">
+                            </li>
+                            <li class="year5">
+                                <div class="text">
+                                    <h3 class="year">眷屬安心照護機構</h3>
+                                    <p class="content">榮獲內政部評鑑優等企業<br>
+                                        獲得中華民國最佳企業金獎</p>
+                                </div>
+                                <img src="Image/about/about_timeline_pic5_RWD.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
@@ -270,6 +374,14 @@
         </div>
 
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/header-footer.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="JS/about.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

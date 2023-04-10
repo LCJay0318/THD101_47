@@ -5,38 +5,37 @@ body{
 
     font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
     letter-spacing: 0.15em;
-
+    box-sizing: border-box;
 }
 
 /* ----------------模組化---------------- */
-
 h1{
     font-weight: 700;
-    font-size: 96px;
-    line-height: 139px;
+    font-size: 9.6rem;
+    line-height: 13.9rem;
     letter-spacing: 0.15em;
     color: white;
 }
 
 h2{
     font-weight: 400;
-    font-size: 48px;
-    line-height: 70px;
+    font-size: 4.8rem;
+    line-height: 7.0rem;
     letter-spacing: 0.15em;
 }
 
 h3{
     font-weight: 400;
-    font-size: 32px;
-    line-height: 46px;
+    font-size: 3.2rem;
+    line-height: 4.6rem;
     letter-spacing: 0.15em;
 }
 
 p{
-    font-size: 20px;
+    font-size: 2.0rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 2.9rem;
     letter-spacing: 0.15em;
     color: #000000;
 }
@@ -84,14 +83,20 @@ a{
 .hero-banner h1{
     margin-bottom: 10vh;
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 .hero-banner h3{
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 
 /* ----------------treemap---------------- */
+
+.main{
+    background-color: #fff;
+}
 
 .tree{
     padding: 60px 0;
@@ -104,6 +109,7 @@ a{
     background-image: url('../Image/organization/treemap_bg.png');
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: contain;
 
 }
 
@@ -122,18 +128,18 @@ a{
 /* ----------------character intro---------------- */
 
 .character{
-    text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 60px 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
+
 }
 
 .container{
-    position: relative;
-    height: 400px;
-    margin-top: 260px;
-    margin-bottom: 30px;
+    /* position: relative; */
+    margin: 0 auto;
+    /* margin-bottom: 30px; */
+    overflow: hidden;
 
 }
 
@@ -141,196 +147,214 @@ a{
     content: '';
     display: block;
     height: 100%;
-    width: 300px;
+    width: 200px;
     position: absolute;
-    top: 30px;
+    top: 0px;
     left: 0;
     background: linear-gradient( to right, rgba(255,255,255, 1), rgba( 255,255,255,0));
     z-index: 1;
-
+    pointer-events: none;
 }
 
 .character::after{
     content: '';
     display: block;
     height: 100%;
-    width: 300px;
+    width: 200px;
     position: absolute;
-    top: 30px;
+    top: 0px;
     right: 0 ;
     background: linear-gradient( to left, rgba(255,255,255, 1), rgba( 255,255,255,0));
     z-index: 1;
+    pointer-events: none;
+}
 
+.character .title{
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .container .intro-list{
-    position: absolute;
-    width: 1890px;
-    left: calc( 50% - 313.5px );
-    margin: auto;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
+    /* transition: .5s; */
+}
+
+.wrapper{
+    min-width: 93rem;
+    /* margin: 0 20px; */
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 .intro-list .intro{
+    padding: 4.5rem;
+    display: flex;
+    border: 6px solid #183D55;
+    margin: 0 auto;
+    /* margin-left: ; */
+    width: 89rem;
+    height: auto;
+    box-sizing: border-box;
 
-    border: 1px solid black;
-    position: relative;
-    width: 567px;
-    border-radius: 30px;
-    margin: 0 30px;
     flex-shrink: 0;
     background-color: white;
     transition: background-color 1s;
 }
 
 .intro .img{
-    top: -50%;
-    left: 50%;
-    width: 290px;
-    height: 290px;
-    display: block;
-    transform:translate(-50%);
-    position: absolute;
-    border-radius: 50%;
+    flex-basis: 220px;
+    flex-shrink: 0;
 }
 
 .intro .img img{
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-
+    display: block;
 }
 
 .intro .text{
-
-    margin-top: 100px;
-
-    padding: 0 50px;
-    padding-bottom: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-left: 4.5rem;
 }
 
 .text h3.title{
-    /* margin-bottom: 20px; */
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
 }
 
 .text .experience{
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 .text .education{
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
-.text .left {
-    width: 30%;
+.text .left{
+    width: 15%;
+    text-align: center;
+    /* padding-left: 1rem; */
 }
 
 .text .right{
     width: 70%;
+
 }
 
-.text p{
+.intro .text p{
+    padding-left: 1rem;
     line-height: 2.5;
+    border-bottom: 1px solid gray;
+}
+
+.intro .text .right p{
+    font-weight: 100;
+}
+
+.intro .text .motto{
     text-align: center;
+    border-bottom: none;
+    line-height: 2;
+    padding-left: 0;
 }
 
-.text .motto{
-    text-align: center;
+/* ========================================== arrow */
+
+.arrow{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(calc(-50% + 10px));
+}
+#prev, #next{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #183D55;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
 }
 
-input{
-    display: none;
-}
-.container #c1:checked ~ .intro-list{
-    left: calc( 50% - 313.5px );
-    transition: .5s;
+#prev:hover, #next:hover{
+    border-color: #183D55;
+    background-color: #183D55;
 }
 
-.container #c1:checked ~ .intro-list > li:nth-child(1){
-    background-color: #E5DED6;
-    transition: 1s;
+#prev{
+    position: absolute;
+    left: 0;
 }
 
-.container #c1:checked ~ .intro-list > li:nth-child(1) .img img{
-    outline: 3px solid #5f4629;
-    transition: .5s;
+#next{
+    position: absolute;
+    right: 0;
 }
 
-.container #c2:checked ~ .intro-list{
-    left: calc( 50% - 940.5px );
-    transition: .5s;
+#prev::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #183D55;
+    border-left: 3px solid #183D55 ;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: rotate(45deg);
 }
 
-.container #c2:checked ~ .intro-list > li:nth-child(2){
-    background-color: #E5DED6;
-    transition: 1s;
+#next::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #183D55;
+    border-right: 3px solid #183D55 ;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    transform: rotate(-45deg);
 }
 
-.container #c2:checked ~ .intro-list > li:nth-child(2) .img img{
-    outline: 3px solid #5f4629;
-    transition: .5s;
+#prev:hover::before, #next:hover::before{
+    border-color: white ;
 }
 
-.container #c3:checked ~ .intro-list{
-    left: calc( 50% - 1567.5px );
-    transition: .5s;
-}
-
-.container #c3:checked ~ .intro-list > li:nth-child(3){
-    background-color: #E5DED6;
-    transition: 1s;
-}
-
-.container #c3:checked ~ .intro-list > li:nth-child(3) .img img{
-    outline: 3px solid #5f4629;
-    transition: .5s;
-}
-
-/* selection-set */
+/* ========================================== dot */
 
 .selection{
-
     width: 200px;
     margin: 0 auto;
-    padding-top: 450px;
+    margin-top: 30px;
+    /* padding-top: 450px; */
     display: flex;
     justify-content: space-between;
 }
 
-.selection label{
+.selection span{
     width: 20px;
     height: 20px;
-    border: 2px solid #5f4629;
+    border: 2px solid #183D55;
     border-radius: 20px;
     cursor: pointer;
     transition: .3s;
 }
 
-#c1:checked ~ .selection label:nth-child(1){
+span.choose{
     width: 40px;
     left: 50%;
     right: 50%;
-    background-color: #5f4629;
-    transition: .3s;
-}
-
-#c2:checked ~ .selection label:nth-child(2){
-    width: 40px;
-    left: 50%;
-    right: 50%;
-    background-color: #5f4629;
-    transition: .3s;
-}
-
-#c3:checked ~ .selection label:nth-child(3){
-    width: 40px;
-    left: 50%;
-    right: 50%;
-    background-color: #5f4629;
-    transition: .3s;
+    background-color: #183D55;
 }
 
 /* ----------------training---------------- */
@@ -338,6 +362,9 @@ input{
 .training{
     margin: 0 auto;
     padding: 60px 0;
+    background-image: url('../Image/organization/training_bg.png');
+    background-position: right center;
+    background-size: cover;
 }
 
 .training .main-block{
@@ -346,6 +373,8 @@ input{
 
 .training .title{
     margin-bottom: 60px;
+    color: white;
+    text-shadow: 1px 1px 10px #666;
 }
 
 .training .grid{
@@ -356,6 +385,7 @@ input{
                          'pic3  text2 text2 pic4'
                          'pic5  pic6  text3 text3';
     grid-gap: 20px;
+    padding: 0px;
 }
 
 .grid .pic1{
@@ -382,8 +412,6 @@ input{
     grid-area: pic6;
 }
 
-/*  */
-
 .grid .text1{
     grid-area: text1;
 }
@@ -397,24 +425,201 @@ input{
 }
 
 .grid .pic1, .grid .pic2, .grid .pic3, .grid .pic4, .grid .pic5, .grid .pic6{
-    box-shadow: 0px 0px 10px #666;
+    border: 4px solid white;
+    overflow: hidden;
 }
 
 .grid .pic1 img, .grid .pic2 img, .grid .pic3 img, .grid .pic4 img, .grid .pic5 img, .grid .pic6 img{
    display: block;
+   transition: .3s;
+}
+
+.grid .pic1 img:hover,
+.grid .pic2 img:hover,
+.grid .pic3 img:hover,
+.grid .pic4 img:hover,
+.grid .pic5 img:hover,
+.grid .pic6 img:hover{
+    transform:scale(1.1);
+
 }
 
 .grid .text1, .grid .text2, .grid .text3{
-    border: 1px solid black;
+    backdrop-filter: blur(5px);
+    background-color: rgba( 255,255,255,0.5);
     padding: 35px 30px ;
-    text-align: center;
-    box-shadow: 0px 0px 10px #666;
+    box-sizing: border-box;
 }
 
-.text1 h3, .text2 h3, .text3 h3{
+.grid .text1:hover, .grid .text2:hover, .grid .text3:hover{
+    /* transform:scale(1.1); */
+}
+
+.grid .text1 h3, .text2 h3, .text3 h3{
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.text1 p, .text2 p, .text3 p{
+.grid .text1 p, .text2 p, .text3 p{
     line-height: 2;
+}
+
+/* animation */
+
+.animate__animated{
+    animation-duration: 2s;
+}
+/* ==================== RWD =================== */
+
+@media screen and ( max-width: 414px ){
+    
+    h1{
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 10rem;
+        letter-spacing: 0.15em;
+        color: white;
+    }
+
+    h2{
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 7.0rem;
+        letter-spacing: 0.15em;
+    }
+
+    h3{
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 4.6rem;
+        letter-spacing: 0.15em;
+    }
+
+    p{
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.9rem;
+        letter-spacing: 0.15em;
+    }
+
+    .main-block{
+        max-width: 374px;
+        margin: 0 20px;
+    }
+
+    .hero-banner h3{
+        width: 100%;
+    }
+    .hero-banner h1{
+        margin-bottom: 5vh;
+    }
+    
+    .hero-banner .main-block{
+        padding: 5vh 0;
+    }
+
+    /* ----------------tree---------------- */
+    .tree{
+        padding: 5vh 0;
+    }
+
+    /* ----------------character intro---------------- */
+    .character{
+        padding: 5vh 0;
+    }
+
+    .character::before, .character::after{
+        display: none;
+    }
+
+    .character .title{
+        margin-bottom: 30px;
+    }
+
+    .wrapper{
+        min-width: 100%;
+    }
+
+    .intro-list .intro{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .intro .img img{
+        width: auto;
+    }
+
+    .intro .text{
+        margin: 0 auto;
+        width: auto;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    .text h3.title{
+        font-size: 2rem;
+        padding-bottom: 0px;
+    }
+
+    .intro .text p{
+        border: none;
+        padding-left: 0;
+    }
+
+    .text .right{
+        width: 70%;
+    }
+
+    #prev, #next{
+        width: 40px;
+        height: 40px;
+    }
+
+    #prev:before{
+        width: 15px;
+        height: 15px;
+    }
+
+    #next:before{
+        width: 15px;
+        height: 15px;  
+    }
+    /* ----------------training---------------- */
+    .training{
+        margin: 0 auto;
+        padding: 5vh 0;
+        background-image: url('../Image/organization/training_bg.png');
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .training .title{
+        margin-bottom: 30px;
+    }
+
+    .training .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 'text1 text1'
+                             'pic1 pic2'
+                             'text2 text2'
+                             'pic3 pic4'
+                             'text3 text3'
+                             'pic5  pic6';
+        grid-gap: 10px;
+        padding: 0px;
+    }
+
+    .grid .text1, .grid .text2, .grid .text3{
+        padding: 0px 30px ;
+    }
+
+    .grid .text1 h3, .text2 h3, .text3 h3{
+        margin: 10px 0;
+    }
+
 }

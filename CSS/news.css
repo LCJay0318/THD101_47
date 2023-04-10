@@ -9,34 +9,33 @@ body{
 }
 
 /* ----------------模組化---------------- */
-
 h1{
     font-weight: 700;
-    font-size: 96px;
-    line-height: 139px;
+    font-size: 9.6rem;
+    line-height: 13.9rem;
     letter-spacing: 0.15em;
     color: white;
 }
 
 h2{
     font-weight: 400;
-    font-size: 48px;
-    line-height: 70px;
+    font-size: 4.8rem;
+    line-height: 7.0rem;
     letter-spacing: 0.15em;
 }
 
 h3{
     font-weight: 400;
-    font-size: 32px;
-    line-height: 46px;
+    font-size: 3.2rem;
+    line-height: 4.6rem;
     letter-spacing: 0.15em;
 }
 
 p{
-    font-size: 20px;
+    font-size: 2.0rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 2.9rem;
     letter-spacing: 0.15em;
     color: #000000;
 }
@@ -49,14 +48,15 @@ a{
 
     max-width: 1200px;
     margin: 0 auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-
+.main{
+    background-color: #fff;
+}
 /* ----------------hero-banner---------------- */
 
 
@@ -84,98 +84,119 @@ a{
 .hero-banner h1{
     margin-bottom: 10vh;
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 .hero-banner h3{
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 /* ----------------news---------------- */
-
-.company{
-    height: auto;
-    width: 100%;
-    padding: 10vh 0;
-    box-sizing: border-box;
+.container{
+    padding: 30px 0;
+    border-top: 1px solid #48678E;
 }
-
-.company .main-block{
+.container .main-block{
     flex-flow: column;
 }
 
-/* ----------------project---------------- */
-
-.project{
+.tab_container{
     height: auto;
     width: 100%;
-    padding: 10vh 0;
     box-sizing: border-box;
-    background-color: #48678E;
+    display: none;
 }
 
-.project .main-block{
-    flex-flow: column;
+.tab-title{
+    margin-top: 30px;
+}
+
+.tab-title .main-block{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+
+}
+
+.tab-title .main-block span{
+    padding: 30px 0px 30px 10px;
+    width: 100%;
+    font-size: 3.2rem;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0 ;
+}
+
+span + span{
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray gray transparent gray;
+    /* margin-left: 10px; */
+}
+span:first-child{
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray gray transparent gray;
+}
+
+span.on{
     color: white;
+    background-color: #48678E;
+    border-color: #48678E ;
 }
 
-/* ----------------project---------------- */
-
-.honor{
-    height: auto;
-    width: 100%;
-    padding: 10vh 0;
-    box-sizing: border-box;
-}
-
-.honor .main-block{
-    flex-flow: column;
-}
-
-.news-title{
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.news-title h2{
-    margin-bottom: 30px;
+.tab-title .main-block span.on::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: #48678E transparent transparent transparent;
+    border-style: solid;
+    border-width: 20px;
 }
 
 .news-list{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
     width: 100%;
 }
 
 .news-list li{
+    position: relative;
     width: 27%;
-    height: 320px;
+    height: 275px;
     border: 1px solid #999;
     background-color: white;
     padding: 30px;
     overflow: hidden;
     transition: .5s;
-    /* border-radius: 10px; */
+    margin: 10px 7px 10px;
 }
 
 .news-list li img{
     width: 100%;
     display: block;
-    /* border-radius: 10px; */
 }
 
-.text{
+.news-list .text{
     width: 100%;
     background-color: white;
     transition: .7s;
 }
-.text p{
+.news-list .text p{
     text-align: center;
-    line-height: 3;
+    line-height: 2;
 }
 
 .news-list li:hover .text{
-    
-    transform: translateY( -50px );
+    transform: translateY( -35px );
     transition: .5s;
 }
 
@@ -185,7 +206,98 @@ a{
 }
 
 .news-list li:hover{
-    transform: translateY( -5px );
-    box-shadow: 0 0 10px #666;
+    transform: translateY( -10px );
+    box-shadow: 0 0 20px #ccc;
     transition: .5s;
+}
+
+/* ==================== RWD =================== */
+
+@media screen and ( max-width: 414px ){
+    
+    h1{
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 10rem;
+        letter-spacing: 0.15em;
+        color: white;
+    }
+
+    h2{
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 7.0rem;
+        letter-spacing: 0.15em;
+    }
+
+    h3{
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 4.6rem;
+        letter-spacing: 0.15em;
+    }
+
+    p{
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.9rem;
+        letter-spacing: 0.15em;
+    }
+
+    .main-block{
+        max-width: 374px;
+        margin: 0 20px;
+    }
+
+    .hero-banner h3{
+        width: 100%;
+    }
+    .hero-banner h1{
+        margin-bottom: 5vh;
+    }
+    
+    .hero-banner .main-block{
+        padding: 5vh 0;
+    }
+
+    /* ----------------news---------------- */
+
+    .news{
+        padding: 5vh 0;
+    }
+
+    .tab-title{
+        margin-top: 0;
+    }
+    .tab-title .main-block span{
+        padding: 10px;
+        font-size: 2rem;
+    }
+    .news-list{
+        flex-direction: column;
+    }
+
+    .news-list li{
+        width: 100%;
+        height: 320px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .news-list li+li{
+        margin-top: 30px;
+    }
+
+    .news-list li img{
+        margin-bottom: 10px;
+    }
+    .text p{
+        line-height: 2;
+    }
+
+    .text p:last-child{
+        display: none;
+    }
+
 }

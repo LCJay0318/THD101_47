@@ -9,34 +9,33 @@ body{
 }
 
 /* ----------------模組化---------------- */
-
 h1{
     font-weight: 700;
-    font-size: 96px;
-    line-height: 139px;
+    font-size: 9.6rem;
+    line-height: 13.9rem;
     letter-spacing: 0.15em;
     color: white;
 }
 
 h2{
     font-weight: 400;
-    font-size: 48px;
-    line-height: 70px;
+    font-size: 4.8rem;
+    line-height: 7.0rem;
     letter-spacing: 0.15em;
 }
 
 h3{
     font-weight: 400;
-    font-size: 32px;
-    line-height: 46px;
+    font-size: 3.2rem;
+    line-height: 4.6rem;
     letter-spacing: 0.15em;
 }
 
 p{
-    font-size: 20px;
+    font-size: 2.0rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 2.9rem;
     letter-spacing: 0.15em;
     color: #000000;
 }
@@ -84,16 +83,22 @@ a{
 .hero-banner h1{
     margin-bottom: 10vh;
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 .hero-banner h3{
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 
 /* ----------------selection---------------- */
 
-.main > input{
+.main{
+    background-color: white;
+}
+
+/* .main > input{
     display: none;
 }
 
@@ -112,22 +117,26 @@ a{
 
 .selection li{
     width: 100%;
-    /* padding: 30px 0; */
     position: relative;
     text-align: center;
     margin: 0 auto;
 }
 
-.selection label span{
-    font-size: 40px;
+.selection h3{
+    font-size: 3.2rem;
     padding-bottom: 10px;
     text-align: center;
     cursor: pointer;
     color: #999;
     position: relative;
+    display: inline-block;
 }
 
-.selection label span::after{
+.selection h3:hover{
+    color: #48678E;
+}
+
+.selection h3::after{
     content: "";
     position: absolute;
     right: 50%;
@@ -137,36 +146,70 @@ a{
     transition: .3s;
 }
 
-.selection li+li:before{
-    content:"|" ;
-    font-size: 24px ;
-    position: absolute;
-    left: 0 ;
-    top: 50% ;
-    transform: translateY(-50%) ;
-    margin: auto;
-  }
-
-/* ------------------------------選到bussiness */
-#bussiness:checked ~ .buss{
-    display: block;
-}
-
-#bussiness:checked ~ .house, #bussiness:checked ~ .public{
-    display: none;
-}
-
-#bussiness:checked ~ .selection li:nth-child(1) span{
-    color: #48678E;
-}
-
-#bussiness:checked ~ .selection li:nth-child(1) span::after{
+.selection li h3:hover:after{
     right:0%;
     left:0%;
 }
 
+.selection li+li:before{
+    content:"|" ;
+    font-size: 24px ;
+    position: absolute;
+    color: #999;
+    left: 0 ;
+    top: 50% ;
+    transform: translateY(-50%) ;
+    margin: auto;
+} */
+
+/* 選到後變色 */
+/* .selection li.checked h3{
+    color: #48678E;
+}
+
+.selection li.checked h3:after{
+    right:0%;
+    left:0%;
+} */
+
+/* ------------------------------下拉式選單 */
+.select_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin: 100px 0;
+}
+
+/* .select_form+.select_form{
+    margin-left: 20px;
+} */
+
+.select_form label{
+    width: 30%;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;   
+}
+
+.select_list{
+    width: 70%;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    padding: 10px 10px;
+    outline: none;
+    border: 1px solid #48678E;
+    color: #48678E;
+    background-color: #eee;
+    appearance: none;
+    background-image: url('../Image/performence/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 96% center;
+}
+
 /* ------------------------------選到house */
-#house:checked ~ .house{
+/* #house:checked ~ .house{
     display: block;
 }
 
@@ -174,16 +217,16 @@ a{
     display: none;
 }
 
-#house:checked ~ .selection li:nth-child(2) span{
+#house:checked ~ .selection li:nth-child(2) h3{
     color: #48678E;
 }
 
-#house:checked ~ .selection li:nth-child(2) span::after{
+#house:checked ~ .selection li:nth-child(2) h3::after{
     right:0%;
     left:0%;
-}
+} */
 /* ------------------------------選到public */
-#public:checked ~ .public{
+/* #public:checked ~ .public{
     display: block;
 }
 
@@ -191,86 +234,83 @@ a{
     display: none;
 }
 
-#public:checked ~ .selection li:nth-child(3) span{
+#public:checked ~ .selection li:nth-child(3) h3{
     color: #48678E;
 }
 
-#public:checked ~ .selection li:nth-child(3) span::after{
+#public:checked ~ .selection li:nth-child(3) h3::after{
     right:0%;
     left:0%;
-}
+} */
 
-/* ----------------bussiness---------------- */
-
-.buss{
-    padding-bottom: 60px;
-    position: relative;
-    height: 550px;
-}
-
-.buss .main-block{
-    flex-direction: column;
-}
-
-/* ----------------house---------------- */
-
-.house{
-    padding-bottom: 60px;
-    position: relative;
-    height: 550px;
-}
-
-.house .main-block{
-    flex-direction: column;
-}
-
-
-/* ----------------public---------------- */
-
-.public{
-    padding-bottom: 60px;
-    position: relative;
-    height: 550px;
-}
-
-.public .main-block{
-    flex-direction: column;
-}
 
 /* ----------------通用---------------- */
 
-.bg{
-
-    position: absolute;
-    top: 15%;
-    width: 100%;
-    height: 300px;
-    background-color: #48678E;
-    z-index: -1;
-
-}
-
-.title{
-    margin-bottom: 20px;
-}
-
-.list{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.project .main-block{
+    justify-content: start;
     align-items: center;
+    flex-wrap: wrap;
 }
-
-.list li{
-    width: 100%;
-    height: calc( 535px);
-    /* height: 600px; */
-    margin: 0 10px;
+.project a{
+    display: block;
+    width: 0%;
+    height: 0;
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid #2A2C2E;
+    opacity: 0;
+    transition: .5s;
 }
 
+.project a.open{
+    display: block;
+    width: 24%;
+    height: calc( 525px);
+    margin: 0 .5%;
+    margin-bottom: 30px;
+    opacity: 1;
+    transition: .5s;
+}
+
+.project a+a{
+    /* margin-left: 20px; */
+}
+
+.project a img{
+    display: block;
+    width: 100%;
+
+    filter: brightness(50%);
+    transition: .7s ;
+}
+
+.project a .text{
+    padding: 10px 10px;
+    /* text-align: center; */
+    background-color: white;
+    /* border-top: 3px solid #F4D481; */
+    /* border-left: 1px solid gray;
+    border-right: 1px solid gray; */
+    box-sizing: border-box;
+
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -64px;
+    transition: .5s ;
+
+}
+
+.project a .text h3{
+    color: #48678E;
+    /* font-weight: 700; */
+    margin-bottom: 10px;
+}
+
+.project a .text p{
+    font-weight: 100;
+    line-height: 1.5;
+}
+/*  */
 .list li:first-child{
     margin-left: 0;
 }
@@ -287,26 +327,25 @@ a{
 }
 
 .list li a .text{
-    padding: 30px 0;
+    padding: 10px 0;
     text-align: center;
     background-color: white;
-    border-top: 1px solid #2A2C2E;
-    border-left: 1px solid #2A2C2E;
-    border-right: 1px solid #2A2C2E;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
     box-sizing: border-box;
 
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: -70px;
+    bottom: -80px;
     transition: .7s ;
 
 }
 
 .list .text h3{
-
     color: #2A2C2E;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .list .text p{
@@ -316,17 +355,126 @@ a{
 
 /* ----------------------hover---------------- */
 
-.list li a:hover > .text{
+.project a:hover > .text{
 
     height: auto;
     bottom: 0px;
     transition: .7s ;
 }
 
-.list li a:hover > img{
+.project a:hover > img{
     filter: brightness(100%);
     transition: .7s ;
 }
 
 
 
+/* ==================== RWD =================== */
+
+
+@media screen and ( max-width: 414px ){
+    
+    h1{
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 10rem;
+        letter-spacing: 0.15em;
+        color: white;
+    }
+
+    h2{
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 7.0rem;
+        letter-spacing: 0.15em;
+    }
+
+    h3{
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 4.6rem;
+        letter-spacing: 0.15em;
+    }
+
+    p{
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.9rem;
+        letter-spacing: 0.15em;
+    }
+
+    .main-block{
+
+        max-width: 374px;
+        margin: 0 20px;
+
+    }
+    
+    .hero-banner h3{
+        width: 100%;
+    }
+    .hero-banner h1{
+        margin-bottom: 5vh;
+    }
+    
+    .hero-banner .main-block{
+        padding: 5vh 0;
+    }
+
+
+    /* select_form */
+
+    .select_form{
+        /* flex-direction: column; */
+        margin: 5vh 2px;
+        width: 33%;
+    }
+
+    .select_form label{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .select_list{
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 10px 8px;
+        background-image: url('../Image/performence/arrow_RWD.svg');
+        background-position: 94% center;
+    }
+
+    /* project */
+
+    .project a.open{
+        width: 49%;
+        height: 417px ;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .project a img{
+        filter: brightness(100%);
+    }
+
+    .project a .text{
+        padding: 0 ;
+        background-color: white;
+        width: 100%;
+        position: static;
+        /* left: 0;
+        bottom: -64px; */
+        transition: .5s ;
+    
+    }
+
+    .project a .text h3{
+        font-size: 2.2rem;
+        margin-bottom: 0;
+    }
+
+    .project a .text p{
+        font-weight: 400;
+    }
+}

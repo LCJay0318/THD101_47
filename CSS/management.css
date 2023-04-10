@@ -12,31 +12,31 @@ body{
 
 h1{
     font-weight: 700;
-    font-size: 96px;
-    line-height: 139px;
+    font-size: 9.6rem;
+    line-height: 13.9rem;
     letter-spacing: 0.15em;
     color: white;
 }
 
 h2{
     font-weight: 400;
-    font-size: 48px;
-    line-height: 70px;
+    font-size: 4.8rem;
+    line-height: 7.0rem;
     letter-spacing: 0.15em;
 }
 
 h3{
     font-weight: 400;
-    font-size: 32px;
-    line-height: 46px;
+    font-size: 3.2rem;
+    line-height: 4.6rem;
     letter-spacing: 0.15em;
 }
 
 p{
-    font-size: 20px;
+    font-size: 2.0rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 2.9rem;
     letter-spacing: 0.15em;
     color: #000000;
 }
@@ -86,10 +86,12 @@ a{
 .hero-banner h1{
     margin-bottom: 10vh;
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 .hero-banner h3{
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 /* ----------------contain---------------- */
@@ -98,8 +100,14 @@ a{
     background-image: url('../Image/management/contain_bg.png');
     background-size: cover;
     background-position: center center;
+    width: 100%;
 }
 
+.main-block{
+
+    overflow: hidden;
+
+}
 
 .list{
     width: 100%;
@@ -139,4 +147,142 @@ a{
     line-height: 3;
     width: 350px;
     margin: 0 auto;
+}
+
+
+/* ==================== RWD =================== */
+
+
+@media screen and ( max-width: 414px ){
+
+    
+    h1{
+        font-weight: 700;
+        font-size: 3.7rem;
+        line-height: 10rem;
+        letter-spacing: 0.15em;
+        color: white;
+    }
+
+    h2{
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 7.0rem;
+        letter-spacing: 0.15em;
+    }
+
+    h3{
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 4.6rem;
+        letter-spacing: 0.15em;
+    }
+
+    p{
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.9rem;
+        letter-spacing: 0.15em;
+    }
+
+    .main-block{
+        max-width: 374px;
+        margin: 0 20px;
+    }
+
+    .hero-banner h3{
+        width: 100%;
+    }
+    .hero-banner h1{
+        margin-bottom: 5vh;
+    }
+    
+    .hero-banner .main-block{
+        padding: 5vh 0;
+    }
+
+
+    /*  ------------------contain--------------- */
+
+    .contain .main-block{
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .list li{
+        width: 100%;
+        flex-direction: column;
+        /* align-items: center;
+        justify-content:space-between; */
+    }
+    
+    .list li .pic-left{
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    
+    .list li .pic-right{
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .list li .pic-left img, .list li .pic-right img{
+        width: 100%;
+    }
+
+    #order1{
+        order: 1;
+    }
+
+    #order2{
+        order: 2;
+    }
+
+    #order3{
+        order: 3;
+    }
+
+    #order4{
+        order: 4;
+    }
+
+    #order5{
+        order: 5;
+    }
+
+    #order6{
+        order: 6;
+    }
+
+    #order7{
+        order: 7;
+    }
+
+    #order8{
+        order: 8;
+    }
+
+    #order9{
+        order: 9;
+    }
+
+    #order10{
+        order: 10;
+    }
+
+    .list li .text{
+        padding: 30px 0;
+    }
+    
+    .list li .text h3{
+        margin-bottom: 20px;
+    }
+    
+    .list li .text p{
+        font-weight: 400;
+        line-height: 3;
+        width: 300px;
+        margin: 0 auto;
+    }
 }

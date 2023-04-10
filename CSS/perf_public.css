@@ -9,38 +9,36 @@ body{
 }
 
 /* ----------------模組化---------------- */
-
 h1{
     font-weight: 700;
-    font-size: 96px;
-    line-height: 139px;
+    font-size: 9.6rem;
+    line-height: 13.9rem;
     letter-spacing: 0.15em;
     color: white;
 }
 
 h2{
     font-weight: 400;
-    font-size: 48px;
-    line-height: 70px;
+    font-size: 4.8rem;
+    line-height: 7.0rem;
     letter-spacing: 0.15em;
 }
 
 h3{
     font-weight: 400;
-    font-size: 32px;
-    line-height: 46px;
+    font-size: 3.2rem;
+    line-height: 4.6rem;
     letter-spacing: 0.15em;
 }
 
 p{
-    font-size: 20px;
+    font-size: 2.0rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 2.9rem;
     letter-spacing: 0.15em;
     color: #000000;
 }
-
 a{
     text-decoration: none;
 }
@@ -84,10 +82,12 @@ a{
 .hero-banner h1{
     margin-bottom: 10vh;
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 .hero-banner h3{
     color: white;
+    text-shadow: 5px 5px 10px #333;
 }
 
 /* ----------------contain---------------- */
@@ -96,6 +96,7 @@ a{
     padding: 0 0 10vh ;
     height: 860px;
     position: relative;
+    background-color: #fff;
 }
 
 .bg{
@@ -130,11 +131,14 @@ a{
     color: black;
 }
 
+.breadcrumb li.rwd{
+    display: none;
+}
+
 .breadcrumb li a{
     text-decoration: none;
     color: black;
     font-size: 20px;
-
 }
 
 .breadcrumb li a:hover{
@@ -151,25 +155,62 @@ a{
     text-align: center;
 }
 
-.pic{
+#pic{
     position: absolute;
     top: 150px;
     right: 0;
+    box-shadow: -1px 1px 10px black;
+    z-index: 1;
+    transition: 1s;
+    cursor: pointer;
 }
 
-article{
+.moving-left{
+    animation: moving-left 1s ease;
+}
+.moving-right{
+    animation: moving-right 1s ease;
+}
+
+@keyframes moving-left{
+    0%{
+        left: 0vw;
+    }
+    50%{
+        left: -30vw;
+    }
+    100%{
+        left: 0vw;
+    }
+}
+
+@keyframes moving-right{
+    0%{
+        right: 0vw;
+    }
+    50%{
+        right: -30vw;
+    }
+    100%{
+        right: 0vw;
+    }
+}
+
+#text{
     width: 488px;
-    border: 1px solid black;
     padding: 30px;
     box-sizing: border-box;
     background-color: #fff;
-
+    box-shadow: 1px 1px 10px black;
     top: 35%;
     left:0;
     position: absolute;
+    z-index: 1;
+    transition: 1s;
+    cursor: pointer;
 }
 
-article h3{
+#text h3{
     text-align: center;
     margin-bottom: 20px;
     line-height: 2;
@@ -177,26 +218,164 @@ article h3{
 
 }
 
-article ul{
+#text ul{
     display: flex;
     flex-direction: column;
-
-
 }
 
-article ul li{
+#text ul li{
     display: flex;
     justify-content: space-between;
 }
 
-article .name{
-    margin-left: 20px;
-    line-height: 2.5;
+#text li+li .name, #text li+li .description{
+    border-top: 1px solid gray;
 }
 
-article .description{
+
+#text .name{
+    width: 25%;
+    margin-left: 20px;
+    line-height: 2;
+}
+
+#text .description{
     font-weight: 100;
-    line-height: 2.5;
+    line-height: 2;
     width: 255px;
     margin-right: 20px;
+}
+
+
+
+/* ==================== RWD =================== */
+
+
+@media screen and ( max-width: 414px ){
+    
+    h1{
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 10rem;
+        letter-spacing: 0.15em;
+        color: white;
+    }
+
+    h2{
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 7.0rem;
+        letter-spacing: 0.15em;
+    }
+
+    h3{
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 4.6rem;
+        letter-spacing: 0.15em;
+    }
+
+    p{
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.9rem;
+        letter-spacing: 0.15em;
+    }
+
+    .main-block{
+
+        max-width: 374px;
+        margin: 0 20px;
+
+    }
+
+    .hero-banner h3{
+        width: 100%;
+    }
+    .hero-banner h1{
+        margin-bottom: 5vh;
+    }
+    
+    .hero-banner .main-block{
+        padding: 5vh 0;
+    }
+
+    .contain{
+        padding: 0 0 5vh;
+        height: auto;
+    }
+
+    .breadcrumb li{
+        display: none;
+    }
+
+    .breadcrumb li.rwd{
+        display: block;
+    }
+    .breadcrumb li.rwd::before{
+        color: white;
+        margin-right: 5px;
+        content: '<';
+    }
+
+    .breadcrumb li a{
+        font-size: 1.4rem;
+        color: white;
+    }
+
+    .contain .main-block{
+        height: auto;
+    }
+
+    .title{
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    #pic{
+        position: static;
+
+        box-shadow: none;
+        top: auto;
+        left: auto;
+        z-index: 1;
+    }
+
+    #pic img{
+        width: 100%;
+    }
+
+    #text{
+        width: 100%;
+        padding: 10px; 
+        box-shadow: none;
+        top: auto;
+        right: auto;
+        position: static;
+        z-index: 1;
+    }
+
+    .bg{
+        width: 100%;
+        height: 50%;
+        top: 0;
+        right: 0;
+        background-color: #48678E;
+        position: absolute;
+    }
+
+    #text li+li .name, #text li+li .description{
+        border-top: 1px solid gray;
+    }
+
+    #text .name{
+        width: 20%;
+    }
+
+    #text .description{
+        width: 60%;
+        font-weight: 400;
+    }
+
 }

@@ -8,29 +8,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href='CSS/header.css'>
+    <link rel="stylesheet" href='CSS/header-footer.css'>
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="CSS/news.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>News</title>
 </head>
 <body>
     
+    <div id="loading">
+        <div id="loading_el"></div>
+    </div>
     <!-- main -->
     <div class="main">
         
         <!-- hero-banner -->
         <section class="hero-banner">
             <div class="main-block">
-                <h1>NEWS & Activity</h1>
-                <h3>最新消息及活動</h3>
+                <h1 data-aos="zoom-in-up"
+                data-aos-duration="1000">NEWS & Activity</h1>
+                <h3 data-aos="zoom-in-up"
+                data-aos-duration="1000" data-aos-delay="300">最新消息及活動</h3>
             </div>
         </section>
         
         <!-- header -->
-        <header class="header">
+        <header class="header" data-aos="fade-down"
+        data-aos-anchor=".news"
+        data-aos-duration="600" data-aos-once="true">
             <div class="main-block">
                 <a href="index.html" class="logo"></a>
+                <ul class="nav">
+                    <li  data-aos="fade-right" data-aos-anchor=".news" data-aos-duration="600" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="about.html"><p>公司簡介</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".news" data-aos-duration="600" 
+                    data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="management.html"><p>工程管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".news" data-aos-duration="600" 
+                    data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="performence.html"><p>工程實績</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".news" data-aos-duration="600" 
+                    data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="organization.html"><p>組織管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".news" data-aos-duration="600" 
+                    data-aos-delay="400" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="news.html"><p>活動及消息</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".news" data-aos-duration="600" 
+                    data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="contact.html"><p>聯絡我們</p></a>
+                    </li>
+                </ul>
+                <div class="hamburger"></div>
+            </div>
+            <div class="hidden_nav">
                 <ul class="nav">
                     <li>
                         <a href="about.html"><p>公司簡介</p></a>
@@ -52,131 +87,191 @@
                     </li>
                 </ul>
             </div>
+
         </header>
 
         <!-- company activity -->
-        <section class="company">
-            <div class="main-block">
-                <div class="news-title">
-                    <h2>最新消息</h2>
-                    <h3>公司活動</h3>
+        <div class="news">
+            <div class="tab-title">
+                <div class="main-block">
+                    <span id="company" class="">公司活動</span>
+                    <span id="project" class="">工程消息</span>
+                    <span id="honor" class="">榮耀時刻</span>
                 </div>
-                <ul class="news-list">
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/comp_pic1.png" alt="">
-                            <div class="text">
-                                <p>2022/12/25</p>
-                                <p>歡慶公司尾牙活動</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/comp_pic2.png" alt="">
-                            <div class="text">
-                                <p>2023/1/30</p>
-                                <p>2023年度員工旅遊</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/comp_pic3.png" alt="">
-                            <div class="text">
-                                <p>2023/2/18</p>
-                                <p>職場安全-友善職場環境觀摩</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
             </div>
-        </section>
 
-        <!-- project activity -->
-        <section class="project">
-            <div class="main-block">
-                <div class="news-title">
-                    <h3>工程消息</h3>
-                </div>
-                <ul class="news-list">
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/proj_pic1.png" alt="">
-                            <div class="text">
-                                <p>2022/5/13</p>
-                                <p>台中大雄綠色產業園區啟動</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/proj_pic2.png" alt="">
-                            <div class="text">
-                                <p>2022/6/10</p>
-                                <p>新建工程上梁典禮順利圓滿</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/proj_pic3.png" alt="">
-                            <div class="text">
-                                <p>2022/7/24</p>
-                                <p>太陽能新建工程使用執照核准</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+            <div class="container">
+                <div class="main-block">
+                    <section id="company" class="tab_container">
+                        <ul class="news-list">
+                            <li>
+                                <a href="news_inside.html">
+                                    <img src="Image/news/comp_pic1.png" alt="">
+                                    <div class="text">
+                                        <p>2022/12/25</p>
+                                        <p>歡慶公司尾牙活動</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/comp_pic2.png" alt="">
+                                    <div class="text">
+                                        <p>2023/1/30</p>
+                                        <p>2023年度員工旅遊</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/comp_pic3.png" alt="">
+                                    <div class="text">
+                                        <p>2023/2/18</p>
+                                        <p>職場安全-友善職場環境觀摩</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/comp_pic1.png" alt="">
+                                    <div class="text">
+                                        <p>2022/12/25</p>
+                                        <p>歡慶公司尾牙活動</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/comp_pic2.png" alt="">
+                                    <div class="text">
+                                        <p>2023/1/30</p>
+                                        <p>2023年度員工旅遊</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/comp_pic3.png" alt="">
+                                    <div class="text">
+                                        <p>2023/2/18</p>
+                                        <p>職場安全-友善職場環境觀摩</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
 
-        <!-- honor activity -->
-        <section class="honor">
-            <div class="main-block">
-                <div class="news-title">
-                    <h3>榮耀時刻</h3>
+                    <!-- project activity -->
+                    <section id="project" class="tab_container">
+                        <ul class="news-list">
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/proj_pic1.png" alt="">
+                                    <div class="text">
+                                        <p>2022/5/13</p>
+                                        <p>台中大雄綠色產業園區啟動</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/proj_pic2.png" alt="">
+                                    <div class="text">
+                                        <p>2022/6/10</p>
+                                        <p>新建工程上梁典禮順利圓滿</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/proj_pic3.png" alt="">
+                                    <div class="text">
+                                        <p>2022/7/24</p>
+                                        <p>太陽能新建工程使用執照核准</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/proj_pic2.png" alt="">
+                                    <div class="text">
+                                        <p>2022/6/10</p>
+                                        <p>新建工程上梁典禮順利圓滿</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/proj_pic3.png" alt="">
+                                    <div class="text">
+                                        <p>2022/7/24</p>
+                                        <p>太陽能新建工程使用執照核准</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+        
+                    <!-- honor activity -->
+                    <section id="honor" class="tab_container">
+                        <ul class="news-list">
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/honor_pic1.png" alt="">
+                                    <div class="text">
+                                        <p>2022/12/18</p>
+                                        <p>Dreamer足球隊獲世足賽金牌</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/honor_pic2.png" alt="">
+                                    <div class="text">
+                                        <p>2023/1/30</p>
+                                        <p>年度最佳員工獲獎者</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/honor_pic3.png" alt="">
+                                    <div class="text">
+                                        <p>2022/11/7</p>
+                                        <p>榮獲國際建築優點大獎</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="Image/news/honor_pic1.png" alt="">
+                                    <div class="text">
+                                        <p>2022/12/18</p>
+                                        <p>Dreamer足球隊獲世足賽金牌</p>
+                                        <p>- VIEW MORE -</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
-                <ul class="news-list">
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/honor_pic1.png" alt="">
-                            <div class="text">
-                                <p>2022/12/18</p>
-                                <p>Dreamer足球隊獲世足賽金牌</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/honor_pic2.png" alt="">
-                            <div class="text">
-                                <p>2023/1/30</p>
-                                <p>年度最佳員工獲獎者</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="Image/news/honor_pic3.png" alt="">
-                            <div class="text">
-                                <p>2022/11/7</p>
-                                <p>榮獲國際建築優點大獎</p>
-                                <p>- VIEW MORE -</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
             </div>
-        </section>
+
+        </div>
     </div>
 
     <!-- footer -->
@@ -244,5 +339,12 @@
 
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/header-footer.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="JS/news.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

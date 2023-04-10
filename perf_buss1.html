@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href='CSS/header.css'>
+    <link rel="stylesheet" href='CSS/header-footer.css'>
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="CSS/perf_buss.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>performence</title>
 </head>
 <body>
     
-
+    <div id="loading">
+        <div id="loading_el"></div>
+    </div>
 
     <!-- main -->
     <div class="main">
@@ -24,38 +27,71 @@
         <!-- hero-banner -->
         <section class="hero-banner">
             <div class="main-block">
-                <h1>PROJECT<br>
+                <h1 data-aos="zoom-in-up"
+                data-aos-duration="1000">PROJECT<br>
                     PERFORMENCE</h1>
-                <h3>工程實績</h3>
+                <h3 data-aos="zoom-in-up"
+                data-aos-duration="1000" data-aos-delay="300">工程實績</h3>
             </div>
         </section>
 
-        <!-- header -->
-        <header class="header">
+       <!-- header -->
+       <header class="header" data-aos="fade-down"
+        data-aos-anchor=".contain"
+        data-aos-duration="600" data-aos-once="true">
             <div class="main-block">
                 <a href="index.html" class="logo"></a>
                 <ul class="nav">
-                    <li>
+                    <li  data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="about.html"><p>公司簡介</p></a>
                     </li>
-                    <li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="management.html"><p>工程管理</p></a>
                     </li>
-                    <li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="performence.html"><p>工程實績</p></a>
                     </li>
-                    <li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="organization.html"><p>組織管理</p></a>
                     </li>
-                    <li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="400" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="news.html"><p>活動及消息</p></a>
                     </li>
-                    <li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
                         <a href="contact.html"><p>聯絡我們</p></a>
                     </li>
                 </ul>
-            </div>
-        </header>
+               <div class="hamburger"></div>
+           </div>
+           <div class="hidden_nav">
+               <ul class="nav">
+                   <li>
+                       <a href="about.html"><p>公司簡介</p></a>
+                   </li>
+                   <li>
+                       <a href="management.html"><p>工程管理</p></a>
+                   </li>
+                   <li>
+                       <a href="performence.html"><p>工程實績</p></a>
+                   </li>
+                   <li>
+                       <a href="organization.html"><p>組織管理</p></a>
+                   </li>
+                   <li>
+                       <a href="news.html"><p>活動及消息</p></a>
+                   </li>
+                   <li>
+                       <a href="contact.html"><p>聯絡我們</p></a>
+                   </li>
+               </ul>
+           </div>
+
+       </header>
 
         <!-- contain -->
 
@@ -71,41 +107,44 @@
                     <li><a href="performence.html">工程實績</a></li>
                     <li><a href="performence.html">商業建築</a></li>
                     <li><a href="perf_buss1.html">優府大樓</a></li>
+                    <li class="rwd"><a href="performence.html">返回</a></li>
                 </ul>
 
                 <div class="title">
                     <h2>商辦建築</h2>
                 </div>
 
-                <div class="pic">
-                    <img src="Image/performence/buss/pic1.png" alt="">
-                </div>
+                <div class="container">
+                    <div id="pic">
+                        <img src="Image/performence/buss/pic1.png" alt="">
+                    </div>
 
-                <article>
-                    <h3>優府大廈</h3>
-                    <ul>
-                        <li>
-                            <p class="name">型式</p>
-                            <p class="description">現代化商辦大樓</p>
-                        </li>
-                        <li>
-                            <p class="name">構造</p>
-                            <p class="description">高強度鋼筋混凝土</p>
-                        </li>
-                        <li>
-                            <p class="name">位置</p>
-                            <p class="description">位於新興商業區</p>
-                        </li>
-                        <li>
-                            <p class="name">完工時間</p>
-                            <p class="description">2020.3月</p>
-                        </li>
-                        <li>
-                            <p class="name">建案介紹</p>
-                            <p class="description">大樓設計簡潔、時尚，擁有高檔辦公室、先進會議室和優質商業服務設施，能滿足不同企業的需求。</p>
-                        </li>
-                    </ul>
-                </article>
+                    <article id="text">
+                        <h3>優府大廈</h3>
+                        <ul>
+                            <li>
+                                <p class="name">型式</p>
+                                <p class="description">現代化商辦大樓</p>
+                            </li>
+                            <li>
+                                <p class="name">構造</p>
+                                <p class="description">高強度鋼筋混凝土</p>
+                            </li>
+                            <li>
+                                <p class="name">造價</p>
+                                <p class="description">21億(新台幣)</p>
+                            </li>
+                            <li>
+                                <p class="name">完工時間</p>
+                                <p class="description">2020.3月</p>
+                            </li>
+                            <li>
+                                <p class="name">建案介紹</p>
+                                <p class="description">大樓設計簡潔、時尚，擁有高檔辦公室、先進會議室和優質商業服務設施，能滿足不同企業的需求。</p>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
 
             </div>
         </div>
@@ -177,5 +216,13 @@
 
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/header-footer.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/performence_buss.js"></script>
+    <script>
+        AOS.init();
+
+    </script>
 </body>
 </html>

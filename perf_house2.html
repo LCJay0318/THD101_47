@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href='CSS/header.css'>
+    <link rel="stylesheet" href='CSS/header-footer.css'>
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="CSS/perf_house.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>performence</title>
 </head>
 <body>
     
-
+    <div id="loading">
+        <div id="loading_el"></div>
+    </div>
 
     <!-- main -->
     <div class="main">
@@ -24,16 +27,48 @@
         <!-- hero-banner -->
         <section class="hero-banner">
             <div class="main-block">
-                <h1>PROJECT<br>
+                <h1 data-aos="zoom-in-up"
+                data-aos-duration="1000">PROJECT<br>
                     PERFORMENCE</h1>
-                <h3>工程實績</h3>
+                <h3 data-aos="zoom-in-up"
+                data-aos-duration="1000" data-aos-delay="300">工程實績</h3>
             </div>
         </section>
 
         <!-- header -->
-        <header class="header">
+        <header class="header" data-aos="fade-down"
+        data-aos-anchor=".contain"
+        data-aos-duration="600" data-aos-once="true">
             <div class="main-block">
                 <a href="index.html" class="logo"></a>
+                <ul class="nav">
+                    <li  data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="about.html"><p>公司簡介</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="management.html"><p>工程管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="performence.html"><p>工程實績</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="organization.html"><p>組織管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="400" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="news.html"><p>活動及消息</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".contain" data-aos-duration="600" 
+                    data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="contact.html"><p>聯絡我們</p></a>
+                    </li>
+                </ul>
+                <div class="hamburger"></div>
+            </div>
+            <div class="hidden_nav">
                 <ul class="nav">
                     <li>
                         <a href="about.html"><p>公司簡介</p></a>
@@ -55,6 +90,7 @@
                     </li>
                 </ul>
             </div>
+
         </header>
 
         <!-- contain -->
@@ -69,41 +105,44 @@
                     <li><a href="performence.html">工程實績</a></li>
                     <li><a href="performence.html">集合住宅</a></li>
                     <li><a href="perf_house2.html">湖畔別墅</a></li>
+                    <li class="rwd"><a href="performence.html">返回</a></li>
                 </ul>
 
                 <div class="title">
                     <h2>集合住宅</h2>
                 </div>
 
-                <div class="pic">
-                    <img src="Image/performence/house/pic2.png" alt="">
-                </div>
+                <div class="container">
+                    <div id="pic">
+                        <img src="Image/performence/house/pic2.png" alt="">
+                    </div>
 
-                <article>
-                    <h3>湖畔別墅</h3>
-                    <ul>
-                        <li>
-                            <p class="name">型式</p>
-                            <p class="description">高級別墅</p>
-                        </li>
-                        <li>
-                            <p class="name">構造</p>
-                            <p class="description">鋼筋混凝土框架</p>
-                        </li>
-                        <li>
-                            <p class="name">位置</p>
-                            <p class="description">位於湖畔</p>
-                        </li>
-                        <li>
-                            <p class="name">完工時間</p>
-                            <p class="description">2020.11月</p>
-                        </li>
-                        <li>
-                            <p class="name">建案介紹</p>
-                            <p class="description">別墅設計獨特，兼顧實用和美觀，室內裝修精美，為居民打造出一個舒適、安逸的居住空間。</p>
-                        </li>
-                    </ul>
-                </article>
+                    <article id="text">
+                        <h3>湖畔別墅</h3>
+                        <ul>
+                            <li>
+                                <p class="name">型式</p>
+                                <p class="description">高級別墅</p>
+                            </li>
+                            <li>
+                                <p class="name">構造</p>
+                                <p class="description">鋼筋混凝土框架</p>
+                            </li>
+                            <li>
+                                <p class="name">造價</p>
+                                <p class="description">4億(新台幣)</p>
+                            </li>
+                            <li>
+                                <p class="name">完工時間</p>
+                                <p class="description">2020.11月</p>
+                            </li>
+                            <li>
+                                <p class="name">建案介紹</p>
+                                <p class="description">別墅設計獨特，兼顧實用和美觀，室內裝修精美，為居民打造出一個舒適、安逸的居住空間。</p>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
 
             </div>
         </div>
@@ -175,5 +214,12 @@
 
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/header-footer.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="JS/performence_house.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

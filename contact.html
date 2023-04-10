@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href='CSS/header.css'>
+    <link rel="stylesheet" href='CSS/header-footer.css'>
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="CSS/contact.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Contact us</title>
 </head>
 <body>
     
-
+    <div id="loading">
+        <div id="loading_el"></div>
+    </div>
 
     <!-- main -->
     <div class="main">
@@ -24,15 +27,47 @@
         <!-- hero-banner -->
         <section class="hero-banner">
             <div class="main-block">
-                <h1>CONTACT US</h1>
-                <h3>聯絡我們</h3>
+                <h1 data-aos="zoom-in-up"
+                data-aos-duration="1000">CONTACT US</h1>
+                <h3 data-aos="zoom-in-up"
+                data-aos-duration="1000" data-aos-delay="300">聯絡我們</h3>
             </div>
         </section>
 
         <!-- header -->
-        <header class="header">
+        <header class="header" data-aos="fade-down"
+        data-aos-anchor=".join"
+        data-aos-duration="600" data-aos-once="true">
             <div class="main-block">
                 <a href="index.html" class="logo"></a>
+                <ul class="nav">
+                    <li  data-aos="fade-right" data-aos-anchor=".join" data-aos-duration="600" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="about.html"><p>公司簡介</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".join" data-aos-duration="600" 
+                    data-aos-delay="100" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="management.html"><p>工程管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".join" data-aos-duration="600" 
+                    data-aos-delay="200" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="performence.html"><p>工程實績</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".join" data-aos-duration="600" 
+                    data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="organization.html"><p>組織管理</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".join" data-aos-duration="600" 
+                    data-aos-delay="400" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="news.html"><p>活動及消息</p></a>
+                    </li>
+                    <li data-aos="fade-right" data-aos-anchor=".join" data-aos-duration="600" 
+                    data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-once="true">
+                        <a href="contact.html"><p>聯絡我們</p></a>
+                    </li>
+                </ul>
+                <div class="hamburger"></div>
+            </div>
+            <div class="hidden_nav">
                 <ul class="nav">
                     <li>
                         <a href="about.html"><p>公司簡介</p></a>
@@ -54,72 +89,78 @@
                     </li>
                 </ul>
             </div>
+
         </header>
         
         <!-- join us -->
         <section class="join">
             <div class="main-block">
-                <div class="title">
-                    <h2>加入我們</h2>
+                <div class="title" data-aos="zoom-in-up" data-aos-duration="500" data-aos-once="true">
+                    <h2>JOIN US</h2>
+                    <h3>公司福利</h3>
+                    <p>我們重視每個人與企業的託付，成為您生活保障的安心夥伴，是我們的使命所在。</p>
                 </div>
 
                 <div class="secondary">
-                    <div class="sec_title">
-                        <h3>公司福利</h3>
-                        <p>我們重視每個人與企業的託付，成為您生活保障的安心夥伴，是我們的使命所在。</p>
-                    </div>
-
-
                     <ul class="list">
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic1">
                                 <img src="Image/contact/items1.svg" alt="">
                             </div>
                             <p>年終尾牙、春酒活動</p>
                         </li>
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic1">
                                 <img src="Image/contact/items2.svg" alt="">
                             </div>
                             <p>備有機車、汽車停車位</p>
                         </li>
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic1">
                                 <img src="Image/contact/items3.svg" alt="">
                             </div>
-                            <p>婚、傷、生育補助、急難救助補助</p>
+                            <p>婚、喪、生育補助、急難救助補助</p>
                         </li>
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic2">
-                                <img src="Image/contact/items4.svg" alt="">
+                                <picture>
+                                    <source media="(max-width: 414px)" srcset="Image/contact/items4_blue.svg">
+                                    <img src="Image/contact/items4.svg" alt="">
+                                </picture>
                             </div>
                             <p>設置健身房、員工餐廳</p>
                         </li>
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic2">
-                                <img src="Image/contact/items5.svg" alt="">
+                                <picture>
+                                    <source media="(max-width: 414px)" srcset="Image/contact/items5_blue.svg">
+                                    <img src="Image/contact/items5.svg" alt="">
+                                </picture>
                             </div>
                             <p>國內、國外旅遊補助</p>
                         </li>
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic2">
-                                <img src="Image/contact/items6.svg" alt="">
+                                <picture>
+                                    <source media="(max-width: 414px)" srcset="Image/contact/items6_blue.svg">
+                                    <img src="Image/contact/items6.svg" alt="">
+                                </picture>
                             </div>
                             <p>進修獎勵補助</p>
                         </li>
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic1">
                                 <img src="Image/contact/items7.svg" alt="">
                             </div>
                             <p>豐富雜誌、書籍</p>
                         </li>
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic1">
                                 <img src="Image/contact/items8.svg" alt="">
                             </div>
                             <p>定期員工健康檢查</p>
                         </li>
-                        <li class="items">
+                        <li class="items" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
                             <div class="pic1">
                                 <img src="Image/contact/items9.svg" alt="">
                             </div>
@@ -133,7 +174,7 @@
         <!-- insurance -->
         <section class="insurance">
             <div class="main-block">
-                <div class="text">
+                <div class="text" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
                     <div class="title">
                         <h3>完善的保險及退休計畫?</h3>
                     </div>
@@ -144,7 +185,7 @@
                     </div>
                 </div>
 
-                <div class="pic">
+                <div class="pic" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
                     <img src="Image/contact/insurance_pic.png" alt="">
                 </div>
             </div>
@@ -158,28 +199,21 @@
                     <h3>常見問題</h3>
                 </div>
 
-                <input type="checkbox" name="question" id="q1" >
-                <input type="checkbox" name="question" id="q2" >
-                <input type="checkbox" name="question" id="q3" >
-
                 <ul class="list">
-                    <li class="question">
-                        <label for="q1">
-                        <p>完善的保險及退休計畫?</p></label>
+                    <li class="question" data-aos="flip-down" data-aos-duration="1000" data-aos-once="true">
+                        <p>完善的保險及退休計畫?</p>
                     </li>
                     <li class="answer">
                         <p>回答：為員工提供全面、彈性、個人化的保險及退休福利，以保障員工的未來及提高員工的生活品質。其中保險計畫可以包括健康、傷害及失能等各種保險，而退休計畫可以包括養老金、退休金等不同形式的儲蓄及福利。</p>
                     </li>
-                    <li class="question">
-                        <label for="q2">
-                        <p>公司的文化是什麼？</p></label>
+                    <li class="question" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
+                        <p>公司的文化是什麼？</p>
                     </li>
                     <li class="answer">
                         <p>回答：我們公司的文化是以團隊合作、創新、追求卓越為核心價值觀。我們希望每一位員工都能夠在這個文化中找到歸屬感和成就感，並且能夠充分發揮自己的才能和創造力。我們也鼓勵員工參加公司的活動和社區活動，建立更加緊密的社群關係。</p>
                     </li>
-                    <li class="question">
-                        <label for="q3">
-                        <p>公司的培訓和發展計劃是什麼？</p></label>
+                    <li class="question" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
+                        <p>公司的培訓和發展計劃是什麼？</p>
                     </li>
                     <li class="answer">
                         <p>回答：我們公司注重員工的培訓和發展，提供各種形式的培訓計劃和專業發展機會。我們有定期的內部培訓和專業課程，並且鼓勵員工參加外部培訓和學術研究。此外，我們還有晉升和轉職機會，員工可以通過不斷學習和發展實現個人和職業目標。</p>
@@ -191,38 +225,38 @@
         <!-- information -->
         <section class="information">
 
-
-            <div class="title">
+            <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <h3>聯絡資訊</h3>
-                <p>以人為本是Dreamer不變的信念，只有幸福的夥伴，才能打造有競爭力的團隊。<br>我們以需求、關懷為出發點，協助每位夥伴展現專業、發展自我價值與規劃生涯，我們更重視未來，期待與夥伴一同成長創造未來。</p>
+                <p>以人為本是Dreamer不變的信念，只有幸福的夥伴，才能打造有競爭力的團隊。我們以需求、關懷為出發點，協助每位夥伴展現專業、發展自我價值與規劃生涯，我們更重視未來，期待與夥伴一同成長創造未來。</p>
             </div>
-
 
             <article class="send">
                 <div class="form-box">
-                    <form action="">
-                        <h4>Contact Us</h4>
+                    <form action="" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
+                        <h4>CONTACT US</h4>
                         <div class="name">
                             <div class="sex">
                                 <input type="radio" name="sex" id="man"><label for="man">先生</label>
                                 <input type="radio" name="sex" id="woman"><label for="woman">女士</label>
                             </div>
                             <input class="text" type="name" name="name" required>
-                            <label for="">姓名</label>
+                            <label for="">姓名*</label>
                         </div>
                         <div class="phone">
                             <input class="text" type="phone" name="phone" required>
-                            <label for="">連絡電話</label>
+                            <label for="">連絡電話*</label>
                         </div>
                         <div class="mail">
                             <input class="text" type="mail" name="mail" required>
-                            <label for="">電子信箱</label>
+                            <label for="">電子信箱*</label>
                         </div>
                         <div class="statement">
                             <p>需求說明</p>
-                            <textarea name="statement" id="" cols="30" rows="3" placeholder="What's your dreams ?"></textarea>
+                            <textarea name="statement" id="" cols="28" rows="5" placeholder="What's your dreams ?"></textarea>
                         </div>
-                        <input class="submit" type="submit" name="submit" value="確認送出">
+                        <div class="submit_item">
+                            <input class="submit" type="submit" name="submit" value="確認送出">
+                        </div>
                     </form>
                 </div>
             </article>
@@ -230,12 +264,12 @@
             <article class="company-information">
 
                 <div class="main-block">
-                    <div class="left">
+                    <div class="left" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-once="true">
                         <p class="com-name">Dreamer</p>
-                        <div class="addr">
+                        <a class="addr" href="https://www.google.com/maps?ll=25.041892,121.525618&z=16&t=m&hl=zh-TW&gl=TW&mapclient=embed&cid=6404223283318825111">
                             <i class="fa-solid fa-house"></i>
                             <p>台北市中山區夢想路98號</p>
-                        </div>
+                        </a>
                         <div class="phone">
                             <i class="fa-solid fa-phone"></i>
                             <p>02-2266-1111</p>
@@ -250,7 +284,7 @@
                         </div>
                     </div>
 
-                    <div class="right">
+                    <div class="right" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-once="true">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7696120334126!2d121.52210322341855!3d25.041891500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1679120616958!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -258,6 +292,8 @@
         </section>
 
     </div>
+ 
+
 
     <!-- footer -->
     <footer class="footer">
@@ -323,6 +359,32 @@
         </div>
 
     </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="JS/header-footer.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        AOS.init();
 
+        $(function(){
+            let qa_list = $(".list");
+            let question_list = qa_list.find(".question");
+            let answer_list = qa_list.find(".answer");
+
+            for( let i = 0 ; i < question_list.length ; i++){
+                question_list.eq(i).click(function(){
+                    answer_list.eq(i).slideToggle();
+                    question_list.eq(i).toggleClass("on");
+                })
+            }
+
+            $(".submit").click(function(e){
+                e.preventDefault();
+                $(this).toggleClass("active");
+            }) ;
+        })
+        
+    </script>
 </body>
 </html>
