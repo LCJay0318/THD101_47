@@ -9,21 +9,21 @@ if (window.innerWidth >= 1200 ){
         slide_el[i].style.width = "1200px";
     }
     slide_list.style.width = slide_el.length*window.innerWidth+"px";
-    console.log(slide_wrapper.style.width);
+
 } else if(window.innerWidth <= 500) {
     slide_wrapper.style.width = window.innerWidth-40 + "px";
     for( let i = 0 ; i < slide_el.length ; i++){
         slide_el[i].style.width = (window.innerWidth-40) + "px";
     }
     slide_list.style.width = slide_el.length*window.innerWidth + "px";
-    console.log(slide_wrapper.style.width);
+
 } else {
     slide_wrapper.style.width = window.innerWidth + "px";
     for( let i = 0 ; i < slide_el.length ; i++){
         slide_el[i].style.width = (window.innerWidth) + "px";
     }
     slide_list.style.width = slide_el.length*window.innerWidth + "px";
-    console.log(slide_wrapper.style.width);
+
 }
 
 let index = 2 ;
@@ -31,7 +31,7 @@ let project_next = document.getElementsByClassName("project_slider_next")[0];
 let project_prev = document.getElementsByClassName("project_slider_prev")[0];
 let dot_list = document.getElementsByClassName("project_slider_dot")[0];
 slide_list.style.marginLeft = "calc(" + (-100*(index-1)) + "% - "+ (10*(index-1)) +"px)" ;
-console.log(slide_list.style.marginLeft);
+
 
 project_next.addEventListener("click", function(e){
 
@@ -39,7 +39,7 @@ project_next.addEventListener("click", function(e){
     index += 1 ;
     movelist(index);
 
-    console.log(index);
+
     if ( index == slide_el.length ){
         index = 2;
         setTimeout( function(){
@@ -62,7 +62,7 @@ project_prev.addEventListener("click", function(e){
     e.stopPropagation();
     index -= 1 ;
     movelist(index);
-    console.log(index);
+
     if ( index == 1 ){
         index = 4;
         setTimeout( function(){

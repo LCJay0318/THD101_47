@@ -21,9 +21,7 @@ select_type.addEventListener("change", function(){
     select_type = document.getElementById("type") ;
     select_time = document.getElementById("time") ;
     select_price = document.getElementById("price") ;
-    console.log(select_type.value);
-    console.log(select_time.value);
-    console.log(select_price.value);
+
 
     //先將全部display none
     for( let i = 0 ; i < project_items.length ; i++){
@@ -50,7 +48,7 @@ select_type.addEventListener("change", function(){
         } else if ( select_type.value == "bussiness" && project_items[i].classList.contains("buss") ) {
             //檢查是否符合time value
             checkTimeType(select_time.value, project_items[i], all_item[i] ) ;
-            console.log("buss")
+
             if (all_item[i].typeTrue) {
                 project_items[i].classList.add("open");
                 // project_items[i].setAttribute("style","display: block;");
@@ -89,9 +87,7 @@ select_time.addEventListener("change", function(){
     select_type = document.getElementById("type") ;
     select_time = document.getElementById("time") ;
     select_price = document.getElementById("price") ;
-    console.log(select_type.value);
-    console.log(select_time.value);
-    console.log(select_price.value);
+
 
     //先將全部display none
     for( let i = 0 ; i < project_items.length ; i++){
@@ -119,7 +115,7 @@ select_time.addEventListener("change", function(){
         } else if ( select_type.value == "bussiness" && project_items[i].classList.contains("buss") ) {
             //檢查是否符合time value
             checkTimeType(select_time.value, project_items[i], all_item[i] ) ;
-            console.log("buss")
+
             if (all_item[i].typeTrue) {
                 project_items[i].classList.add("open");
                 // project_items[i].setAttribute("style","display: block;");
@@ -157,9 +153,7 @@ select_price.addEventListener("change", function(){
     select_type = document.getElementById("type") ;
     select_time = document.getElementById("time") ;
     select_price = document.getElementById("price") ;
-    console.log(select_type.value);
-    console.log(select_time.value);
-    console.log(select_price.value);
+
 
     //先將全部display none
     for( let i = 0 ; i < project_items.length ; i++){
@@ -186,7 +180,7 @@ select_price.addEventListener("change", function(){
         } else if ( select_type.value == "bussiness" && project_items[i].classList.contains("buss") ) {
             //檢查是否符合time value
             checkTimeType(select_time.value, project_items[i], all_item[i] ) ;
-            console.log("buss")
+
             if (all_item[i].typeTrue) {
                 project_items[i].classList.add("open");
                 // project_items[i].setAttribute("style","display: block;");
